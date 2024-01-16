@@ -1,13 +1,19 @@
 "use client"
-import { useTranslations } from "next-intl"
-import useProjectContent from "../../utils/content"
+import { useLocale, useTranslations } from "next-intl"
+import useProjectContent from "../../utils/projectcontent"
 import ProjectCard from "./ProjectCard"
 const ProjectSection = () => {
   const Projects = useTranslations("Projects-Section")
   const { projects } = useProjectContent()
+  const locale = useLocale()
+  const isArabic = locale === "ar"
   return (
     <section id="work" data-aos="fade-up">
-      <h1 className="text-4xl md:text-left font-bold text-[#BED250] mb-4 text-center">
+      <h1
+        className={`text-4xl ${
+          isArabic ? "text-right" : "md:text-left"
+        } font-bold text-[#BED250] mb-4 text-center`}
+      >
         {Projects("title")}
       </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-8 lg:gap-12">
