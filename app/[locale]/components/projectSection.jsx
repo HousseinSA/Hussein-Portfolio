@@ -8,6 +8,7 @@ const ProjectSection = () => {
   const locale = useLocale()
   const isArabic = locale === "ar"
   return (
+    // i fuckign don't know what the fucking is going here 
     <section id="work" data-aos="fade-up">
       <h1
         className={`text-4xl ${
