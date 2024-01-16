@@ -1,0 +1,47 @@
+{
+  "Navbar": {
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "Hero-Section": {
+    "hello": "Hello I'm",
+    "name": " Hussein,",
+    "work": "Frontend Developer",
+    "work2": "Full Stack Developer.",
+    "aboutme": "A Full Stack Developer passionate about crafting seamless and  intuitive frontend experiences.",
+    "download": "Download / View CV",
+    "hire": "Hire Me"
+  },
+  "About-Section": {
+    "title": "  About",
+    "discreption": "I'm a passionate web developer with a love for crafting engaging and efficient web applications. As a freelancer, I bring expertise in various web development tools and technologies. Proficient in crafting dynamic and responsive user interfaces using technologies like React, Next.js, and vanilla Javascript",
+    "skills": "Skills",
+    "education": "Education",
+    "certifications": "Certifications",
+    "educationList1": "2 Years University, English Studies",
+    "educationList2": "high school",
+    "educationList3": "English Center",
+    "certificationList1": "BAC, high school diploma equivalent",
+    "certificationList2": "Freecodecamp certificate",
+    "certificationList3": "smart company certificate as intern"
+  },
+  "Projects-Section": {
+    "title": "Projets",
+    "project1": "great app created with react and tailwindCSS for styling and amazing user-interface.",
+    "project2": "Great Ebook store created with react and tailwindCSs and mongodb for database and other amazing tools.",
+    "project3": "i document app created using reactjs for frontend and socket.io and mongodb for backend for an sync document editing in real time",
+    "project4": "weather app created using react and tailwindcss that gives real time weather informations with other info.",
+    "project5": "an budget manager created with react for frontend and tailwindCSS for styling.",
+    "project6": "Google search engie clone created using nextjs for frentend and api route for backend and tailwind for styling beautifull user interface inspiered by google search"
+  },
+  "Contact-Section": {
+    "title": "Let's Connect",
+    "content": "Let's connect and bring you ideas to life! whether you have a project in mind, want to discuss collaboration, or simply have a question.",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending"
+  }
+}

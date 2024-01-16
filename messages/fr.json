@@ -1,0 +1,48 @@
+{
+  "Navbar": {
+    "about": "À propos",
+    "work": "Travail",
+    "contact": "Contact"
+  },
+  "Hero-Section": {
+    "hello": "Bonjour, je suis",
+    "name": "Hussein,",
+    "work": "Développeur Frontend",
+    "work2": "Développeur Full Stack.",
+    "aboutme": "Un développeur Full Stack passionné par la création d'expériences frontend fluides et intuitives.",
+    "download": "Télécharger / Voir le CV",
+    "hire": "Engagez-moi"
+  },
+  "About-Section": {
+    "title": "À propos",
+    "discreption": "Je suis un développeur web passionné par la création d'applications web engageantes et efficaces. En tant que freelance, j'apporte une expertise dans divers outils et technologies de développement web. Compétent dans la création d'interfaces utilisateur dynamiques et réactives en utilisant des technologies telles que React, Next.js et JavaScript natif.",
+
+    "skills": "Compétences",
+    "education": "Éducation",
+    "certifications": "Certifications",
+    "educationList1": "2 ans d'université, Études en anglais",
+    "educationList2": "Lycée",
+    "educationList3": "Centre d'anglais",
+    "certificationList1": "BAC, équivalent du diplôme de fin d'études secondaires",
+    "certificationList2": "Certificat FreeCodeCamp",
+    "certificationList3": "Smart Company en tant que stagiaire"
+  },
+  "Projects-Section": {
+    "title": "Projets",
+    "project1": "Une excellente application créée avec React et TailwindCSS pour le style et une interface utilisateur incroyable.",
+    "project2": "Super librairie électronique créée avec React et TailwindCSS, utilisant MongoDB comme base de données et d'autres outils incroyables.",
+    "project3": "Une application de documentation créée avec ReactJS pour le frontend, Socket.io et MongoDB pour le backend, permettant l'édition de documents en temps réel de manière synchronisée.",
+    "project4": "Application météo créée avec React et TailwindCSS fournissant des informations météorologiques en temps réel avec d'autres détails.",
+    "project5": "Gestionnaire de budget créé avec React pour le frontend et TailwindCSS pour le style.",
+    "project6": "Clone du moteur de recherche Google créé avec Next.js pour le frontend, des routes API pour le backend, et Tailwind pour un style d'interface utilisateur magnifique inspiré par la recherche Google."
+  },
+  "Contact-Section": {
+    "title": "Restons Connectés",
+    "content": "Restons connectés et donnons vie à vos idées ! Que vous ayez un projet en tête, souhaitiez discuter d'une collaboration, ou simplement poser une question.",
+    "email": "E-mail",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours"
+  }
+}
