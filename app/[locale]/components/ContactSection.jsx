@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 const ContactSection = () => {
   const [from, setFrom] = useState("")
   const [subject, setSubject] = useState("")
@@ -36,13 +36,18 @@ const ContactSection = () => {
       toast.error("Error,can't send mail")
     }
   }
+  const isArabic = useLocale()
   const contactSection = useTranslations("Contact-Section")
   return (
     <section className="text-white" id="contact" data-aos="fade-up">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16   md:px-4 py-20 xl:px-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16   py-20 ">
         <div className="flex flex-col justify-between gap-3">
           <div>
-            <h1 className="text-4xl font-bold text-[#BED250] mb-4">
+            <h1
+              className={`text-4xl font-bold ${
+                isArabic ? "md:text-right" : "md:text-left"
+              } text-center text-[#BED250] mb-4`}
+            >
               {contactSection("title")}
             </h1>
             <p className="text-base lg:text-lg text-slate-500">

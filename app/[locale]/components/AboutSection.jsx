@@ -13,7 +13,7 @@ const AboutSection = () => {
       title: "Skills",
       id: "skills",
       content: (
-        <ul className="flex gap-3 items-center mt-3 flex-wrap">
+        <ul className="flex  gap-3 items-center mt-3 flex-wrap">
           <li className="flex gap-2 items-center">
             <Image
               src={
@@ -161,7 +161,7 @@ const AboutSection = () => {
     },
   ]
   const [tab, setTab] = useState("skills")
-  const [loading, startTransition] = useTransition()
+  const [startTransition] = useTransition()
   function handelTabChange(id) {
     startTransition(() => {
       setTab(id)
@@ -169,22 +169,26 @@ const AboutSection = () => {
   }
   return (
     <section className="text-white" id="about" data-aos="fade-up">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-16 py-8 px-4 sm:py-16 xl:px-16">
-        <Image
-          src={"/about_image.jpg"}
-          width={500}
-          height={500}
-          alt="laptop image"
-          className="rounded-md"
-        />
+      <div className="grid grid-cols-1 items-center sm:grid-cols-12 gap-4 mb-10 py-8">
+        <div className="sm:col-span-5  mx-auto place-content-center place-self-center">
+          <div className="h-auto mt-4 lg:mt-0 ">
+            <Image
+              src={"/about_image.jpg"}
+              width={400}
+              height={400}
+              alt="laptop image"
+              className="rounded-md "
+            />
+          </div>
+        </div>
         <div
-          className={`mt-4 md:mt-0 ${
+          className={`mt-4 md:mt-0 col-span-7 ${
             isArabic ? "text-right" : "text-left"
           } flex flex-col h-full`}
         >
           <h1
-            className={`text-4xl  text-center ${
-              isArabic ? "text-right" : "md:text-left"
+            className={`text-4xl text-center ${
+              isArabic ? "lg:text-right" : "lg:text-left"
             }  font-bold text-[#BED250] mb-4`}
           >
             {about("title")}
@@ -210,7 +214,7 @@ const AboutSection = () => {
               {about("certifications")}
             </TabButton>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 ">
             {tabContents.find((t) => t.id === tab)?.content}
           </div>
         </div>

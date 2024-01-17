@@ -12,7 +12,7 @@ const ProjectSection = () => {
     <section id="work" data-aos="fade-up">
       <h1
         className={`text-4xl ${
-          isArabic ? "text-right" : "md:text-left"
+          isArabic ? "md:text-right" : "md:text-left"
         } font-bold text-[#BED250] mb-4 text-center`}
       >
         {Projects("title")}

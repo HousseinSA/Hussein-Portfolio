@@ -1,5 +1,6 @@
 "use client"
 import NavLink from "./NavLink"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const NavMenu = () => {
   return (
@@ -7,6 +8,7 @@ const NavMenu = () => {
       <NavLink href={"#about"} linkName={"About"} />
       <NavLink href={"#work"} linkName={"work"} />
       <NavLink href={"#contact"} linkName={"Contact"} />
+      <LanguageSwitcher />
     </ul>
   )
 }

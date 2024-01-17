@@ -13,7 +13,7 @@ const HeroSection = () => {
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
   return (
     <section data-aos="fade-up">
-      <div className="grid grid-cols-1 items-center sm:grid-cols-12 mb-10">
+      <div className="grid grid-cols-1 items-center gap-4  sm:grid-cols-12  mb-10">
         <div
           className={`col-span-7 text-center ${
             isArabic ? "sm:text-right" : "sm:text-left"
@@ -31,7 +31,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#adb7be] mb-6 text-base sm:text-lg lg:text-xl">
+          <p className="text-[#adb7be] text-right text-dir mb-6 text-base sm:text-lg lg:text-xl">
             {hero("aboutme")}
           </p>
           <div>
@@ -51,17 +51,17 @@ const HeroSection = () => {
           </div>
         </div>
         <div
-          className={`col-span-5 place-content-center place-self-center ${
+          className={`sm:col-span-5    place-content-center place-self-center ${
             isArabic ? "sm:order-first" : ""
           }`}
         >
-          <div className="h-auto mt-4 lg:mt-0 ">
+          <div className=" mt-4 lg:mt-0 ">
             <Image
               src={"/avatar.png"}
               width={400}
               height={400}
               alt="personal image "
-              className="rounded-md transition duration-300 hover:rotate-1  shadow-inner  "
+              className="rounded-md   "
             />
           </div>
         </div>
