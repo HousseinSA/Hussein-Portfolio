@@ -9,8 +9,8 @@ import NavMenu from "./NavMenu"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
 const NavBar = () => {
-  const navbar = useTranslations("Navbar")
   const [openNav, setOpenNav] = useState(false)
+  const navbar = useTranslations("Navbar")
   return (
     <nav className="py-2 px-5 md:px-8 flex fixed top-0 left-0 right-0 z-10 bg-[#121212]  justify-between flex-wrap items-center bg-opacity-90">
       <Link href={"/"} className="text-5xl text-white font-semibold">

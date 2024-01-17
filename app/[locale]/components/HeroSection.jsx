@@ -13,10 +13,10 @@ const HeroSection = () => {
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
   return (
     <section data-aos="fade-up">
-      <div className="grid grid-cols-1 items-center gap-4  sm:grid-cols-12  mb-10">
+      <div className="flex md:flex-row gap-6 items-center justify-center flex-col mb-10 lg:px-10">
         <div
-          className={`col-span-7 text-center ${
-            isArabic ? "sm:text-right" : "sm:text-left"
+          className={`md:col-span-7 px-4 text-center  ${
+            isArabic ? "md:text-right" : "md:text-left"
           }`}
         >
           <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-4">
@@ -31,13 +31,12 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#adb7be] text-right text-dir mb-6 text-base sm:text-lg lg:text-xl">
+          <p className="text-[#adb7be] text-dir mb-6 text-base sm:text-lg lg:text-xl">
             {hero("aboutme")}
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white">
               <Link href={"mailto:nejihoussein1@gmail.com"}>
-                {" "}
                 {hero("hire")}
               </Link>
             </button>
@@ -51,17 +50,17 @@ const HeroSection = () => {
           </div>
         </div>
         <div
-          className={`sm:col-span-5    place-content-center place-self-center ${
-            isArabic ? "sm:order-first" : ""
+          className={`sm:col-span-5 place-content-center place-self-center ${
+            isArabic ? "order-last md:order-first" : ""
           }`}
         >
-          <div className=" mt-4 lg:mt-0 ">
+          <div className="mt-10 md:mt-0">
             <Image
               src={"/avatar.png"}
               width={400}
               height={400}
               alt="personal image "
-              className="rounded-md   "
+              className="rounded-md "
             />
           </div>
         </div>

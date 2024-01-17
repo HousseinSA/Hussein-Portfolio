@@ -13,7 +13,7 @@ const AboutSection = () => {
       title: "Skills",
       id: "skills",
       content: (
-        <ul className="flex  gap-3 items-center mt-3 flex-wrap">
+        <ul className="flex  gap-3 items-center justify-center md:justify-start mt-3 flex-wrap">
           <li className="flex gap-2 items-center">
             <Image
               src={
@@ -133,10 +133,8 @@ const AboutSection = () => {
       title: "Certifications",
       id: "certifications",
       content: (
-        <ul
-          className={`list-disc ${isArabic ? "direction" : ""} mt-3 direction `}
-        >
-          <li className="marker:text-[#bed250]">
+        <ul className={`list-disc ${isArabic ? "direction" : ""} mt-3 `}>
+          <li className="marker:text-[#bed250] ">
             {about("certificationList1")}
           </li>
           <li className="marker:text-[#bed250]">
@@ -152,7 +150,7 @@ const AboutSection = () => {
       title: "education",
       id: "education",
       content: (
-        <ul className={`list-disc ${isArabic ? "" : ""} mt-3 direction `}>
+        <ul className={`list-disc ${isArabic ? "direction" : ""} mt-3  `}>
           <li className="marker:text-[#bed250]">{about("educationList1")}</li>
           <li className="marker:text-[#bed250]">{about("educationList2")}</li>
           <li className="marker:text-[#bed250]">{about("educationList3")}</li>
@@ -161,7 +159,7 @@ const AboutSection = () => {
     },
   ]
   const [tab, setTab] = useState("skills")
-  const [startTransition] = useTransition()
+  const [loading, startTransition] = useTransition()
   function handelTabChange(id) {
     startTransition(() => {
       setTab(id)
@@ -169,22 +167,22 @@ const AboutSection = () => {
   }
   return (
     <section className="text-white" id="about" data-aos="fade-up">
-      <div className="grid grid-cols-1 items-center sm:grid-cols-12 gap-4 mb-10 py-8">
-        <div className="sm:col-span-5  mx-auto place-content-center place-self-center">
-          <div className="h-auto mt-4 lg:mt-0 ">
+      <div className="flex md:flex-row gap-6 lg:gap-16 items-center justify-center flex-col mb-10 lg:px-10">
+        <div className="sm:col-span-5 place-content-center place-self-center">
+          <div className="mt-10 md:mt-0">
             <Image
               src={"/about_image.jpg"}
               width={400}
               height={400}
               alt="laptop image"
-              className="rounded-md "
+              className="rounded-md min-w-[250px] min-h-[250px]"
             />
           </div>
         </div>
         <div
-          className={`mt-4 md:mt-0 col-span-7 ${
+          className={`mt-4 md:mt-0 px-4 col-span-7 ${
             isArabic ? "text-right" : "text-left"
-          } flex flex-col h-full`}
+          } flex flex-col`}
         >
           <h1
             className={`text-4xl text-center ${
