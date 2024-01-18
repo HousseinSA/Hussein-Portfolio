@@ -43,5 +43,8 @@
     "message": "Message",
     "send": "Send Message",
     "sending": "Sending"
+  },
+  "Footer-Section": {
+    "footer": "Hussein Portfolio all right reserved."
   }
 }

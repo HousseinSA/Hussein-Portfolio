@@ -6,7 +6,7 @@ import { IoMdEye } from "react-icons/io"
 const ProjectCard = ({ imgUrl, title, discreption, links }) => {
   return (
     <div className=" group flex flex-col cursor-pointer hover:shadow-[#BED250] hover:shadow-xl hover:-translate-y-1 translate-y-0 overflow-hidden transition duration-700">
-      <div className="relative flex-shrink-0">
+      <div className="relative">
         <Image
           src={imgUrl}
           width={500}
@@ -18,7 +18,7 @@ const ProjectCard = ({ imgUrl, title, discreption, links }) => {
           <div className="flex items-center justify-center w-full space-x-8">
             <Link href={links[1]} target="_blank" className="group/link">
               <FaCode className="w-10 h-10 text-[#ADB7BE] p-2 rounded-full border-2 border-[#ADB7BE] relative group-hover/link:border-[#BED250] group-hover/link:text-[#BED250]" />
-            </Link> 
+            </Link>
             <Link href={links[0]} target="_blank" className="group/link">
               <IoMdEye className="w-10 h-10 p-2 text-[#ADB7BE] rounded-full border-2 border-[#ADB7BE]  group-hover/link:border-[#BED250] group-hover/link:text-[#BED250]" />
             </Link>

@@ -12,7 +12,7 @@ const HeroSection = () => {
       ? "https://drive.google.com/file/d/1VFvGw_JwM5QNK-vsRKN0n_nTkQP4z78I/view?usp=drive_link"
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
   return (
-    <section data-aos="fade-up">
+    <section data-aos="scale-up">
       <div className="flex md:flex-row gap-6 items-center justify-center flex-col mb-10 lg:px-10">
         <div
           className={`md:col-span-7 px-4 text-center  ${
@@ -59,8 +59,8 @@ const HeroSection = () => {
               src={"/avatar.png"}
               width={400}
               height={400}
-              alt="personal image "
-              className="rounded-md "
+              alt="personal "
+              className="rounded-full border-4 border-[#BED250] border-double"
             />
           </div>
         </div>

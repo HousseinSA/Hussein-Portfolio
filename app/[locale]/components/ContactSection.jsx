@@ -39,8 +39,9 @@ const ContactSection = () => {
   const isArabic = useLocale()
   const contactSection = useTranslations("Contact-Section")
   return (
-    <section className="text-white" id="contact" data-aos="fade-up">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16   py-20 ">
+    <section className="text-white relative" id="contact" data-aos="fade-up">
+    
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16  py-20 ">
         <div className="flex flex-col justify-between gap-3">
           <div>
             <h1

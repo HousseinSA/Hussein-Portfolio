@@ -44,5 +44,10 @@
     "message": "Message",
     "send": "Envoyer le message",
     "sending": "Envoi en cours"
+  },
+  "Footer-Section": {
+   
+      "footer": "Portfolio Hussein, tous droits réservés."
+    
   }
 }
