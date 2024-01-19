@@ -3,7 +3,8 @@ import Image from "next/image"
 import { useState, useTransition } from "react"
 import TabButton from "./TabButton"
 import { useLocale, useTranslations } from "next-intl"
-
+import Lottie from "lottie-react"
+import LottieAnimation from "../../../public/lottie-animation/aboutSectionLottie.json"
 const AboutSection = () => {
   const about = useTranslations("About-Section")
   const locale = useLocale()
@@ -167,20 +168,14 @@ const AboutSection = () => {
   }
   return (
     <section className="text-white" id="about" data-aos="fade-up">
-      <div className="flex md:flex-row gap-6 lg:gap-16 items-center justify-center flex-col mb-10 lg:px-10">
-        <div className="sm:col-span-5 place-content-center place-self-center">
-          <div className="mt-10 md:mt-0">
-            <Image
-              src={"/about_image.jpg"}
-              width={400}
-              height={400}
-              alt="laptop image"
-              className="rounded-md min-w-[250px] min-h-[250px]"
-            />
+      <div className="flex flex-col lg:flex-row gap-3  md:gap-16 items-center justify-center  mb-10 lg:px-10">
+        <div className="">
+          <div className="w-[400px] lg:h-[400px]">
+            <Lottie animationData={LottieAnimation} className="w-full" />
           </div>
         </div>
         <div
-          className={`mt-4 md:mt-0 px-4 col-span-7 ${
+          className={`mt-4 md:mt-0 px-4 ${
             isArabic ? "text-right" : "text-left"
           } flex flex-col`}
         >

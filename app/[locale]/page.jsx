@@ -9,7 +9,6 @@ import "aos/dist/aos.css"
 import FooterSection from "./components/FooterSection"
 import { useEffect } from "react"
 import { useLocale } from "next-intl"
-import Image from "next/image"
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -23,7 +22,7 @@ const Home = () => {
       <main
         className={`flex flex-col ${
           locale === "ar" && "text-right"
-        } bg-[#121212] min-h-screen`}
+        } bg-[#121212]`}
       >
         <NavBar />
         <div className="container mt-[95px] mx-auto py-2 px-8 md:py-4 md:px-12">
