@@ -9,14 +9,15 @@ import Lottie from "lottie-react"
 const HeroSection = () => {
   const hero = useTranslations("Hero-Section")
   const locale = useLocale()
+
   const isArabic = locale === "ar"
   const resumeLink =
     locale === "fr" || locale === "ar"
       ? "https://drive.google.com/file/d/1VFvGw_JwM5QNK-vsRKN0n_nTkQP4z78I/view?usp=drive_link"
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
   return (
-    <section data-aos="scale-up" className="relative">
-      <div className="flex md:flex-row gap-6 min-h-2/4 lg:min-h-screen overflow-x-hidden  items-center justify-center flex-col mb-10 lg:px-10">
+    <section data-aos="zoom-in-up">
+      <div className="flex md:flex-row gap-6 h-screen items-center justify-center flex-col mb-10 lg:px-10">
         <div
           className={`md:col-span-7 px-4 text-center ${
             isArabic ? "md:text-right" : "md:text-left"
@@ -63,11 +64,13 @@ const HeroSection = () => {
               width={400}
               height={400}
               alt="personal"
+              priority
               className="rounded-full border-4 border-[#BED250] border-double"
             />
           </div>
         </div>
       </div>
+      (
       <div className="absolute inset-0 hidden md:block  opacity-10 z-[1]">
         <Lottie animationData={HeroLottie} className="h-full w-full" />
       </div>

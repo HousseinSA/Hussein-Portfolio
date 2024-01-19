@@ -167,11 +167,18 @@ const AboutSection = () => {
     })
   }
   return (
-    <section className="text-white" id="about" data-aos="fade-up">
-      <div className="flex flex-col lg:flex-row gap-3  md:gap-16 items-center justify-center  mb-10 lg:px-10">
-        <div className="">
-          <div className="w-[400px] lg:h-[400px]">
-            <Lottie animationData={LottieAnimation} className="w-full" />
+    <section
+      className="text-white flex items-center h-screen"
+      id="about"
+      data-aos="zoom-in-up"
+    >
+      <div className="flex flex-col lg:flex-row  gap-3 md:gap-16 items-center justify-center mb-10 lg:px-10">
+        <div>
+          <div className="h-full w-full">
+            <Lottie
+              animationData={LottieAnimation}
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
         <div

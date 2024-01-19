@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ap.cx/react-fullpage": "^0.3.0",
     "aos": "^2.3.4",
     "axios": "^1.6.5",
     "lottie-react": "^2.4.0",

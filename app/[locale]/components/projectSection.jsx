@@ -9,7 +9,7 @@ const ProjectSection = () => {
   const isArabic = locale === "ar"
   return (
     // i fuckign don't know what the fucking is going here
-    <section id="work" data-aos="fade-up">
+    <section id="work" data-aos="zoom-in-up" className="lg:py-10 h-screen">
       <h1
         className={`text-4xl ${
           isArabic ? "md:text-right" : "md:text-left"
@@ -17,7 +17,7 @@ const ProjectSection = () => {
       >
         {Projects("title")}
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-8 lg:gap-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 mb-10  gap-8 lg:gap-12">
         {projects.map(({ id, title, discreption, Image, links }) => {
           return (
             <ProjectCard
