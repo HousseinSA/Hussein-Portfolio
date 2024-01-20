@@ -6,44 +6,43 @@ import ProjectSection from "./components/projectSection"
 import ContactSection from "./components/ContactSection"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import FooterSection from "./components/FooterSection"
 import { useEffect } from "react"
 import Fullpage, {
   FullPageSections,
   FullpageSection,
-  FullpageNavigation,
-} from "@ap.cx/react-fullpage"
+} from "@ap.cx/react-fullpage"  
 const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 500,
       easing: "ease-in-out", // Default easing for AOS animations
       Infinity: true, // Only run once flag
-      // Custom easing function (cubic bezier)
-      easing: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
       // Anchor placement options
-      anchorPlacement: "center-bottom",
+      anchorPlacement: "top-bottom",
       threshold: 0.5,
     })
   }, [])
   return (
-    <main className="flex flex-col bg-[#121212]"> 
+    <main className="bg-[#121212]">
       <NavBar />
-      <div className="container mt-[95px] md:mt-[0px] mx-auto py-2 px-8 md:py-4 md:px-12">
+      <div className="container  md:mt-[0px] mx-auto py-2 px-8 md:py-4 md:px-12">
         <Fullpage>
           <FullPageSections>
+            {/* hero */}
             <FullpageSection>
               <HeroSection />
             </FullpageSection>
+            {/* about */}
             <FullpageSection>
               <AboutSection />
             </FullpageSection>
+            {/* Project */}
             <FullpageSection>
               <ProjectSection />
             </FullpageSection>
+            {/* contact */}
             <FullpageSection>
               <ContactSection />
-              <FooterSection />
             </FullpageSection>
           </FullPageSections>
         </Fullpage>

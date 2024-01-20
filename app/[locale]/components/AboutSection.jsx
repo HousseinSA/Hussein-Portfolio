@@ -172,8 +172,8 @@ const AboutSection = () => {
       id="about"
       data-aos="zoom-in-up"
     >
-      <div className="flex flex-col lg:flex-row  gap-3 md:gap-16 items-center justify-center mb-10 lg:px-10">
-        <div>
+      <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center justify-center mb-10 lg:px-10">
+        <div className="">
           <div className="h-full w-full">
             <Lottie
               animationData={LottieAnimation}
@@ -184,7 +184,7 @@ const AboutSection = () => {
         <div
           className={`mt-4 md:mt-0 px-4 ${
             isArabic ? "text-right" : "text-left"
-          } flex flex-col`}
+          } flex flex-col justify-center`}
         >
           <h1
             className={`text-4xl text-center ${
@@ -194,7 +194,7 @@ const AboutSection = () => {
             {about("title")}
           </h1>
           <p className="text-base lg:text-lg">{about("discreption")}</p>
-          <div className={`flex mt-4 ${isArabic && "justify-end"}   space-x-3`}>
+          <div className={`flex mt-4 ${isArabic && "justify-end"} space-x-3`}>
             <TabButton
               selectedTab={() => handelTabChange("skills")}
               active={tab === "skills"}

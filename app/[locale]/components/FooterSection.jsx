@@ -2,11 +2,13 @@ import { useTranslations } from "next-intl"
 
 const FooterSection = () => {
   const Year = new Date().getFullYear()
-  const footer = useTranslations('Footer-Section')
+  const footer = useTranslations("Footer-Section")
   return (
     <footer>
-      <div className="flex text-base sm:text-lg text-white justify-center items-center w-full p-5">
-        <p>{footer('footer')} &copy; {Year}</p>
+      <div className="text-sm lg:text-base xl:text-md text-[#adb7be]  w-full py-5">
+        <p>
+          {footer("footer")} &copy; {Year}
+        </p>
       </div>
     </footer>
   )

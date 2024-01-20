@@ -27,7 +27,6 @@
     "certificationList3": "smart company certificate as intern"
   },
   "Projects-Section": {
-    "title": "Projets",
     "project1": "great app created with react and tailwindCSS for styling and amazing user-interface.",
     "project2": "Great Ebook store created with react and tailwindCSs and mongodb for database and other amazing tools.",
     "project3": "i document app created using reactjs for frontend and socket.io and mongodb for backend for an sync document editing in real time",

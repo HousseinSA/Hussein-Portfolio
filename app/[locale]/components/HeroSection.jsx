@@ -5,16 +5,25 @@ import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"
 import HeroLottie from "../../../public/lottie-animation/HeroLottie.json"
 import Lottie from "lottie-react"
+import { useEffect, useState } from "react"
 
 const HeroSection = () => {
   const hero = useTranslations("Hero-Section")
   const locale = useLocale()
-
+  const [lottieBrowser, setLottieBrowser] = useState()
+  useEffect(() => {
+    if (typeof document !== undefined) {
+      setLottieBrowser(
+        <Lottie animationData={HeroLottie} className="h-full w-full" />
+      )
+    }
+  }, [])
   const isArabic = locale === "ar"
   const resumeLink =
     locale === "fr" || locale === "ar"
       ? "https://drive.google.com/file/d/1VFvGw_JwM5QNK-vsRKN0n_nTkQP4z78I/view?usp=drive_link"
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
+
   return (
     <section data-aos="zoom-in-up">
       <div className="flex md:flex-row gap-6 h-screen items-center justify-center flex-col mb-10 lg:px-10">
@@ -71,8 +80,8 @@ const HeroSection = () => {
         </div>
       </div>
       (
-      <div className="absolute inset-0 hidden md:block  opacity-10 z-[1]">
-        <Lottie animationData={HeroLottie} className="h-full w-full" />
+      <div className="absolute inset-0 hidden md:block  opacity-10 -z-[1]">
+        {lottieBrowser}
       </div>
     </section>
   )

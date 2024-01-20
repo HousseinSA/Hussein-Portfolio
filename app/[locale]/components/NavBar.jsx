@@ -16,7 +16,7 @@ const NavBar = () => {
       <Link href={"/"} className="text-5xl text-white font-semibold">
         <Image src={"/logo.png"} width={70} height={100} alt="website logo" />
       </Link>
-      <div className="mobid-menu block md:hidden text-white">
+      <div className="block md:hidden text-white">
         {openNav ? (
           <button
             onClick={() => setOpenNav(false)}
