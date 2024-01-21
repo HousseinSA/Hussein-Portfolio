@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function LocaleLayout({ children }) {
   const messages = useMessages()
-  const locale = useLocale()
+  const locale = useLocale()  
   return (
     <html lang={locale}>
       <link rel="icon" href="/favicon.svg" />

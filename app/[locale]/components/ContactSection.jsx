@@ -7,43 +7,44 @@ import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import Link from "next/link"
 import FooterSection from "../components/FooterSection"
 import { useLocale, useTranslations } from "next-intl"
+import axios from "axios"
 const ContactSection = () => {
   const [from, setFrom] = useState("")
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
+  console.log(process.env.NEXT_PUBLIC_FORSPREE_LINK)
+
   async function handelSubmit(ev) {
     ev.preventDefault()
     setLoading(true)
-    const response = await fetch("https://formspree.io/f/myyryqar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ from, subject, message }),
+    const response = await axios.post(process.env.NEXT_PUBLIC_FORSPREE_LINK, {
+      from,
+      subject,
+      message,
     })
-    const data = await response.json()
-    if (data) {
+    console.log(response)
+    if (response.status === 200) {
       setLoading(false)
       toast.success("Mail sent Succesfully!", {
         backgroundColor: "#BED250", // Background color
-        color: "#ffffff", // Text color
+        color: "#ffffff", // Text color,
       })
       setFrom("")
       setMessage("")
       setSubject("")
     } else {
       setLoading(false)
-      toast.error("Error,can't send mail")
+      toast.error("Error,can't send mail", {})
     }
   }
   const locale = useLocale()
   const isArabic = locale === "arabic"
   const contactSection = useTranslations("Contact-Section")
   return (
-    <section className="text-white md-20" id="contact" data-aos="zoom-in-up">
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-full place-items-center justify-center lg:gap-8 xl:gap-16 pt-20 px-10 ">
-        <div className="flex flex-col justify-between gap-3">
+    <section className="text-white md-20 " id="contact" data-aos="zoom-in-up">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-full place-items-center justify-center lg:gap-8 xl:gap-16 pt-20 px-5 lg:px-10 ">
+        <div className="flex flex-col items-center justify-between gap-3">
           <div>
             <h1
               className={`text-4xl font-bold ${
@@ -52,7 +53,7 @@ const ContactSection = () => {
             >
               {contactSection("title")}
             </h1>
-            <p className="text-base lg:text-lg text-[#adb7be]">
+            <p className="text-base text-center lg:text-start lg:text-lg text-[#adb7be]">
               {contactSection("content")}
             </p>
           </div>
@@ -82,7 +83,7 @@ const ContactSection = () => {
         </div>
         <div className="w-full">
           <form onSubmit={handelSubmit}>
-            <div className="flex flex-col gap-4 justify-center bg-[#181818] py-5 rounded-md md:px-4 px-3">
+            <div className="flex flex-col gap-4 justify-center bg-[#181818] py-0 md:py-5 rounded-md md:px-4 px-3">
               <div>
                 <label className="mb-2 block text-[#BED250]" htmlFor="email">
                   {contactSection("email")}
@@ -145,6 +146,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
+      {/* have to fix notification bug  */}
       <ToastContainer />
     </section>
   )

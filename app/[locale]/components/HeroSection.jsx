@@ -25,7 +25,10 @@ const HeroSection = () => {
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
 
   return (
-    <section id="about" className="relative h-screen mx-auto mt-40 md:mt-0">
+    <section
+      id="about"
+      className="relative h-screen mx-auto mt-40 md:mt-0"
+    >
       <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
         <div
           className={`px-4 text-center ${
@@ -75,7 +78,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 hidden md:block opacity-10 -z-[1]">
+      <div className="absolute inset-0 hidden md:block opacity-10">
         {lottieBrowser}
       </div>
     </section>

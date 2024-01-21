@@ -15,8 +15,8 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 500,
-      easing: "ease-in-out", // Default easing for AOS animations
-      Infinity: true, // Only run once flag
+      easing: "ease-in-out",
+      Infinity: true,
       anchorPlacement: "top-bottom",
       threshold: 0.5,
     })
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <main className="bg-[#121212]">
       <NavBar />
-      <div className="container mx-auto py-2 px-8 md:py-4 md:px-12">
+      <div className="mx-auto py-2 px-8 md:py-4 md:px-12">
         <Fullpage>
           <FullPageSections>
             {/* hero */}
@@ -47,7 +47,6 @@ const Home = () => {
         </Fullpage>
       </div>
     </main>
-
   )
 }
 export default Home

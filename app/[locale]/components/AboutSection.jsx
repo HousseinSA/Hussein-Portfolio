@@ -168,7 +168,7 @@ const AboutSection = () => {
   }
   return (
     <section
-      className="text-white flex items-center h-screen"
+      className="text-white flex items-center h-screen "
       id="about"
       data-aos="zoom-in-up"
     >
