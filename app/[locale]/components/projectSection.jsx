@@ -15,13 +15,15 @@ const ProjectSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-
+    centerMode: true, // Enable center mode
+    centerPadding: "10%", // Adjust the padding as needed
     cssEase: "linear", // Use linear easing for smoother sliding
     responsive: [
       {
         breakpoint: 768,
         settings: {
           arrows: false, // Hide arrows on smaller screens
+          // variableWidth: true,
         },
       },
     ],

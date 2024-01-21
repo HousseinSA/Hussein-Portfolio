@@ -25,10 +25,7 @@ const HeroSection = () => {
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
 
   return (
-    <section
-      id="about"
-      className="relative h-screen mx-auto flex items-center justify-center"
-    >
+    <section id="about" className="relative h-screen mx-auto mt-40 md:mt-0">
       <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
         <div
           className={`px-4 text-center ${
@@ -65,11 +62,7 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div
-          className={`sm:col-span-5 place-content-center place-self-center ${
-            isArabic ? "order-last md:order-first" : ""
-          }`}
-        >
+        <div className={` ${isArabic ? "order-last md:order-first" : ""}`}>
           <div className="mt-10 md:mt-0">
             <Image
               src={"/avatar.png"}
@@ -77,7 +70,7 @@ const HeroSection = () => {
               height={400}
               alt="personal"
               priority
-              className="rounded-full border-4 border-[#BED250] border-double"
+              className="rounded-full w-auto border-4 border-[#BED250] border-double"
             />
           </div>
         </div>
