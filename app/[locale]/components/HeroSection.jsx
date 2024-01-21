@@ -25,10 +25,13 @@ const HeroSection = () => {
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
 
   return (
-    <section data-aos="zoom-in-up">
-      <div className="flex md:flex-row gap-6 h-screen items-center justify-center flex-col mb-10 lg:mb-0 lg:px-10">
+    <section
+      id="about"
+      className="relative h-screen mx-auto flex items-center justify-center"
+    >
+      <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 lg:px-10">
         <div
-          className={`md:col-span-7 px-4 text-center ${
+          className={`px-4 text-center ${
             isArabic ? "md:text-right" : "md:text-left"
           }`}
         >
@@ -79,8 +82,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      (
-      <div className="absolute inset-0 hidden md:block  opacity-10 -z-[1]">
+      <div className="absolute inset-0 hidden md:block opacity-10 -z-[1]">
         {lottieBrowser}
       </div>
     </section>
