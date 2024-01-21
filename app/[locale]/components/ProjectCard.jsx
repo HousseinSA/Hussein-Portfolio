@@ -6,7 +6,7 @@ import { IoMdEye } from "react-icons/io"
 
 const ProjectCard = ({ imgUrl, title, discreption, links }) => {
   return (
-    <div className="group flex h-full flex-col items-center justify-center cursor-pointer w-full">
+    <div className="group flex h-full flex-col items-center mx-4 justify-center cursor-pointer w-full">
       <div className="relative">
         <Image
           src={imgUrl}

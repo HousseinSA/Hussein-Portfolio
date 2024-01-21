@@ -29,7 +29,7 @@ const HeroSection = () => {
       id="about"
       className="relative h-screen mx-auto flex items-center justify-center"
     >
-      <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 lg:px-10">
+      <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
         <div
           className={`px-4 text-center ${
             isArabic ? "md:text-right" : "md:text-left"

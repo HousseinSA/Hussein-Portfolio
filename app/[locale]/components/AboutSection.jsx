@@ -172,7 +172,7 @@ const AboutSection = () => {
       id="about"
       data-aos="zoom-in-up"
     >
-      <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center justify-center mb-10 lg:px-10">
+      <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center justify-center mb-10 px-10">
         <div className="">
           <div className="h-full w-full">
             <Lottie
