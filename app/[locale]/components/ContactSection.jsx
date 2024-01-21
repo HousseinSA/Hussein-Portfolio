@@ -44,7 +44,7 @@ const ContactSection = () => {
   return (
     <section className="text-white md-20 " id="contact" data-aos="zoom-in-up">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-full place-items-center justify-center lg:gap-8 xl:gap-16 pt-20 px-5 lg:px-10 ">
-        <div className="flex flex-col items-center justify-between gap-3">
+        <div className="flex flex-col justify-between gap-3">
           <div>
             <h1
               className={`text-4xl font-bold ${
