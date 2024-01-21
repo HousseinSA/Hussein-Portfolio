@@ -10,14 +10,13 @@ import { useEffect } from "react"
 import Fullpage, {
   FullPageSections,
   FullpageSection,
-} from "@ap.cx/react-fullpage"  
+} from "@ap.cx/react-fullpage"
 const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 500,
       easing: "ease-in-out", // Default easing for AOS animations
       Infinity: true, // Only run once flag
-      // Anchor placement options
       anchorPlacement: "top-bottom",
       threshold: 0.5,
     })
@@ -25,7 +24,7 @@ const Home = () => {
   return (
     <main className="bg-[#121212]">
       <NavBar />
-      <div className="container  md:mt-[0px] mx-auto py-2 px-8 md:py-4 md:px-12">
+      <div className="container mx-auto py-2 px-8 md:py-4 md:px-12">
         <Fullpage>
           <FullPageSections>
             {/* hero */}
@@ -48,7 +47,7 @@ const Home = () => {
         </Fullpage>
       </div>
     </main>
+
   )
 }
-
 export default Home

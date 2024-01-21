@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <section data-aos="zoom-in-up">
-      <div className="flex md:flex-row gap-6 h-screen items-center justify-center flex-col mb-10 lg:px-10">
+      <div className="flex md:flex-row gap-6 h-screen items-center justify-center flex-col mb-10 lg:mb-0 lg:px-10">
         <div
           className={`md:col-span-7 px-4 text-center ${
             isArabic ? "md:text-right" : "md:text-left"

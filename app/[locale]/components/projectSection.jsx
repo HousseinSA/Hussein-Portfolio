@@ -1,60 +1,51 @@
-"use client"
-import useProjectContent from "../../utils/projectcontent"
+import React from "react"
+import Slider from "react-slick"
 import ProjectCard from "./ProjectCard"
-import { Swiper, SwiperSlide } from "swiper/react"
 
-// Import Swiper styles
-import "swiper/css"
-import "swiper/css/effect-coverflow"
-import "swiper/css/pagination"
-
-// import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules"
-const ProjectSection = () => {
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import useProjectContent from "../../utils/projectcontent"
+const ProjectSlider = () => {
   const { projects } = useProjectContent()
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800, // Adjust the speed for smoother sliding
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+
+    cssEase: "linear", // Use linear easing for smoother sliding
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false, // Hide arrows on smaller screens
+        },
+      },
+    ],
+  }
+
   return (
     <section
       id="work"
       data-aos="zoom-in-up"
-      className="p-10 h-screen flex justify-center items-center "
+      className="p-10 h-screen mx-auto flex items-center justify-center"
     >
-      <div className="flex flex-wrap items-center w-[800px] h-[800px] justify-center mb-10 gap-8 lg:gap-12">
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          loop={true}
-          autoplay={{ delay: 50, disableOnInteraction: false }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper"
-        >
-          {projects.map(({ id, title, discreption, Image, links }) => {
-            return (
-              <>
-                <SwiperSlide key={id}>
-                  <ProjectCard
-                    imgUrl={Image}
-                    title={title}
-                    discreption={discreption}
-                    links={links}
-                  />
-                </SwiperSlide>
-              </>
-            )
-          })}
-        </Swiper>
-      </div>
+      <Slider {...sliderSettings} className="w-full">
+        {projects.map(({ id, title, discreption, Image, links }) => (
+          <ProjectCard
+            key={id}
+            imgUrl={Image}
+            title={title}
+            discreption={discreption}
+            links={links}
+          />
+        ))}
+      </Slider>
     </section>
   )
 }
 
-export default ProjectSection
+export default ProjectSlider
