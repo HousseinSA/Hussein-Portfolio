@@ -1,22 +1,15 @@
-// ProjectCard.jsx
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { FaCode } from "react-icons/fa6"
 import { IoMdEye } from "react-icons/io"
-
-const ProjectCard = ({ imgUrl, title, discreption, links }) => {
+const Mobile_projectSection = ({ title, imgUrl, discreption, links }) => {
   return (
-    <div className="group flex h-full flex-col items-center mx-4 justify-center cursor-pointer w-full">
-      <div className="relative ">
-        <Image
-          src={imgUrl}
-          width={800}
-          height={800}
-          className="rounded-xl min-w-[200px] min-h-[200px] w-full object-cover"
-          alt={title}
-        />
+    <div className="flex flex-col group  cursor-pointer items-center justify-center">
+      <div className="relative">
+        <Image src={imgUrl} alt={title} />
         <div className="absolute hidden top-0 md:flex justify-center gap-4 p-4 items-center left-0 bg-[#181818] h-full w-full opacity-0 group-hover:flex group-hover:opacity-80 transition-all duration-500 cursor-pointer">
-          <div className="text-white bg-[#181818] -translate-y-[100%] group-hover:translate-y-0 duration-500 transition max-w-96">
+          <div className="text-white rounded-b-xl bg-[#181818] -translate-y-[100%] group-hover:translate-y-0 duration-500 transition">
             <h5 className="text-xl font-semibold mb-2">{title}</h5>
             <p className="text-[#ADB7BE]">{discreption}</p>
           </div>
@@ -42,4 +35,4 @@ const ProjectCard = ({ imgUrl, title, discreption, links }) => {
   )
 }
 
-export default ProjectCard
+export default Mobile_projectSection

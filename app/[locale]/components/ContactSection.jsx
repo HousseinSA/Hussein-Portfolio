@@ -13,7 +13,6 @@ const ContactSection = () => {
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
-  console.log(process.env.NEXT_PUBLIC_FORSPREE_LINK)
 
   async function handelSubmit(ev) {
     ev.preventDefault()
@@ -23,7 +22,7 @@ const ContactSection = () => {
       subject,
       message,
     })
-    console.log(response)
+
     if (response.status === 200) {
       setLoading(false)
       toast.success("Mail sent Succesfully!", {

@@ -10,20 +10,28 @@ const ProjectSlider = () => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 800, // Adjust the speed for smoother sliding
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    centerMode: true, // Enable center mode
-    centerPadding: "10%", // Adjust the padding as needed
-    cssEase: "linear", // Use linear easing for smoother sliding
+    centerMode: true,
+    centerPadding: "10%",
+    cssEase: "linear",
     responsive: [
+      {
+        breakpoint: 1024, // Adjust this breakpoint as needed
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
-          arrows: false, // Hide arrows on smaller screens
-          // variableWidth: true,
+          slidesToShow: 1, // Adjust the number of slides to show on smaller screens
+          slidesToScroll: 1, // Adjust the number of slides to scroll on smaller screens
+          arrows: false,
         },
       },
     ],
@@ -33,12 +41,12 @@ const ProjectSlider = () => {
     <section
       id="work"
       data-aos="zoom-in-up"
-      className="p-10 h-screen mx-auto flex items-center justify-center"
+      className="p-10 h-full mx-auto flex  items-center justify-center"
     >
       <Slider {...sliderSettings} className="w-full">
         {projects.map(({ id, title, discreption, Image, links }) => (
           <ProjectCard
-            key={id}
+            key={id}  
             imgUrl={Image}
             title={title}
             discreption={discreption}
