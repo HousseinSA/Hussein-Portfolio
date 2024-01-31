@@ -5,9 +5,8 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import Link from "next/link"
-import FooterSection from "../components/FooterSection"
+import FooterSection from "../Layout/FooterSection"
 import { useLocale, useTranslations } from "next-intl"
-import axios from "axios"
 const ContactSection = () => {
   const [from, setFrom] = useState("")
   const [subject, setSubject] = useState("")
@@ -17,12 +16,11 @@ const ContactSection = () => {
   async function handelSubmit(ev) {
     ev.preventDefault()
     setLoading(true)
-    const response = await axios.post(process.env.NEXT_PUBLIC_FORSPREE_LINK, {
-      from,
-      subject,
-      message,
+    const response = await fetch(process.env.NEXT_PUBLIC_FORSPREE_LINK, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ from, subject, message }),
     })
-
     if (response.status === 200) {
       setLoading(false)
       toast.success("Mail sent Succesfully!", {

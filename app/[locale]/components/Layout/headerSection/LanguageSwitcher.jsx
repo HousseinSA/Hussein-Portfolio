@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "../../../navigation"
+import { Link } from "../../../../../navigation"
 import { useLocale } from "next-intl"
 
 const LanguageSwitcher = () => {

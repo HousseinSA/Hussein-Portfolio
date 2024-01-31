@@ -3,33 +3,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"
-import HeroLottie from "../../../public/lottie-animation/HeroLottie.json"
-import Lottie from "lottie-react"
-import { useEffect, useState } from "react"
+import ParticlesComponent from "../particles/particlesComponent"
 
 const HeroSection = () => {
   const hero = useTranslations("Hero-Section")
   const locale = useLocale()
-  const [lottieBrowser, setLottieBrowser] = useState()
-  useEffect(() => {
-    if (typeof document !== undefined) {
-      setLottieBrowser(
-        <Lottie animationData={HeroLottie} className="h-full w-full" />
-      )
-    }
-  }, [])
   const isArabic = locale === "ar"
   const resumeLink =
     locale === "fr" || locale === "ar"
       ? "https://drive.google.com/file/d/1VFvGw_JwM5QNK-vsRKN0n_nTkQP4z78I/view?usp=drive_link"
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
-
   return (
-    <section
-      id="about"
-      className="relative h-screen mx-auto mt-40 md:mt-0"
-    >
-      <div className="flex md:flex-row gap-6 z-10 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
+    <section id="about" className="relative  h-screen mx-auto mt-40 md:mt-0">
+      <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
         <div
           className={`px-4 text-center ${
             isArabic ? "md:text-right" : "md:text-left"
@@ -65,22 +51,24 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className={` ${isArabic ? "order-last md:order-first" : ""}`}>
-          <div className="mt-10 md:mt-0">
-            <Image
-              src={"/avatar.png"}
-              width={400}
-              height={400}
-              alt="personal"
-              priority
-              className="rounded-full w-auto border-4 border-[#BED250] border-double"
-            />
-          </div>
+        <div
+          className={`${
+            isArabic ? "order-last md:order-first" : ""
+          } mt-10 md:mt-0 w-full `}
+        >
+          <Image
+            src="/avatar.png"
+            alt="personal"
+            width={350}
+            height={350}
+            sizes="(min-width: 980px) 342px, (min-width: 780px) calc(63.89vw - 271px), (min-width: 520px) 342px, calc(97vw - 143px)"
+            className="rounded-full  border-4 border-[#BED250] border-double"
+          />
         </div>
       </div>
-      <div className="absolute inset-0 hidden md:block opacity-10">
-        {lottieBrowser}
-      </div>
+      {/* <div className=" z-30 aboslute w-full h-full inset-0">
+        <ParticlesComponent />
+      </div> */}
     </section>
   )
 }

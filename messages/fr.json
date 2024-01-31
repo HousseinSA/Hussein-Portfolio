@@ -11,7 +11,7 @@
     "work2": "Développeur Full Stack.",
     "aboutme": "Un développeur Full Stack passionné par la création d'expériences frontend fluides et intuitives.",
     "download": "Télécharger / Voir le CV",
-    "hire": "Engagez-moi"
+    "hire": "Joindre"
   },
   "About-Section": {
     "title": "À propos",
@@ -45,8 +45,6 @@
     "sending": "Envoi en cours"
   },
   "Footer-Section": {
-   
-      "footer": "Portfolio Hussein, tous droits réservés."
-    
+    "footer": "Portfolio Hussein, tous droits réservés."
   }
 }

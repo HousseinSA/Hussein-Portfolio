@@ -10,9 +10,10 @@ const ProjectCard = ({ imgUrl, title, discreption, links }) => {
       <div className="relative ">
         <Image
           src={imgUrl}
-          width={800}
-          height={800}
-          className="rounded-xl min-w-[200px] min-h-[200px] w-full object-cover"
+          width={500}
+          height={500}
+          className="rounded-xl object-cover"
+          sizes="(min-width: 680px) 500px, calc(93.33vw - 116px)"
           alt={title}
         />
         <div className="absolute hidden top-0 md:flex justify-center gap-4 p-4 items-center left-0 bg-[#181818] h-full w-full opacity-0 group-hover:flex group-hover:opacity-80 transition-all duration-500 cursor-pointer">
@@ -24,16 +25,16 @@ const ProjectCard = ({ imgUrl, title, discreption, links }) => {
             <Link
               href={links[1]}
               target="_blank"
-              className="group/link hover:scale-125 transition duration-300"
+              className="group/link hover:scale-125 transition duration-300 text-[#ADB7BE] p-2 rounded-full border-2 border-[#ADB7BE] relative group-hover/link:border-[#BED250] group-hover/link:text-[#BED250]"
             >
-              <FaCode className="w-10 h-10 text-[#ADB7BE] p-2 rounded-full border-2 border-[#ADB7BE] relative group-hover/link:border-[#BED250] group-hover/link:text-[#BED250]" />
+              <FaCode className="w-10 h-10 " />
             </Link>
             <Link
               href={links[0]}
               target="_blank"
-              className="group/link hover:scale-125 transition duration-300"
+              className="group/link hover:scale-125 transition duration-300 text-[#ADB7BE] rounded-full border-2 border-[#ADB7BE]  group-hover/link:border-[#BED250] group-hover/link:text-[#BED250]"
             >
-              <IoMdEye className="w-10 h-10 p-2 text-[#ADB7BE] rounded-full border-2 border-[#ADB7BE]  group-hover/link:border-[#BED250] group-hover/link:text-[#BED250]" />
+              <IoMdEye className="w-10 h-10 p-2 " />
             </Link>
           </div>
         </div>
