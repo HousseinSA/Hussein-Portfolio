@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useState, useTransition } from "react"
 import TabButton from "./TabButton"
-import LottieImage from "../lottieImages/LottieImage"
+import LottieImage from "./lottieImages/LottieImage"
 import { useLocale, useTranslations } from "next-intl"
 const AboutSection = () => {
   const about = useTranslations("About-Section")
@@ -168,7 +168,7 @@ const AboutSection = () => {
 
   return (
     <section
-      className="text-white flex items-center pt-20 px-5 lg:px-10 h-screen"
+      className="text-white z-30 flex items-center pt-20 px-5 lg:px-10 h-screen"
       id="about"
       data-aos="zoom-in-up"
     >

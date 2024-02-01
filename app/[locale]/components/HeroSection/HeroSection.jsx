@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"
-import ParticlesComponent from "../particles/particlesComponent"
+import ParticleComponent from "./particles/particlesComponent"
 
 const HeroSection = () => {
   const hero = useTranslations("Hero-Section")
@@ -14,12 +14,12 @@ const HeroSection = () => {
       ? "https://drive.google.com/file/d/1VFvGw_JwM5QNK-vsRKN0n_nTkQP4z78I/view?usp=drive_link"
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
   return (
-    <section id="about" className="relative  h-screen mx-auto mt-40 md:mt-0">
-      <div className="flex md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
+    <section id="about" className="relative h-screen mt-40 md:mt-0">
+      <div className="flex relative md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
         <div
           className={`px-4 text-center ${
             isArabic ? "md:text-right" : "md:text-left"
-          }`}
+          } z-10`}
         >
           <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r text-right from-[#BED250] to-[#109C81]">
@@ -54,10 +54,10 @@ const HeroSection = () => {
         <div
           className={`${
             isArabic ? "order-last md:order-first" : ""
-          } mt-10 md:mt-0 w-full `}
+          } mt-10 md:mt-0 z-10`}
         >
           <Image
-            src="/avatar.png"
+            src="/personal-image.png"
             alt="personal"
             width={350}
             height={350}
@@ -66,9 +66,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      {/* <div className=" z-30 aboslute w-full h-full inset-0">
-        <ParticlesComponent />
-      </div> */}
+      <ParticleComponent />
     </section>
   )
 }
