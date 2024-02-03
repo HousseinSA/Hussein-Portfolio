@@ -13,19 +13,12 @@
     "download": "Télécharger / Voir le CV",
     "hire": "Joindre"
   },
+  "Skills-Section": {
+    "title": "Les technologies que j'utilise"
+  },
   "About-Section": {
     "title": "À propos",
-    "discreption": "Je suis un développeur web passionné par la création d'applications web engageantes et efficaces. En tant que freelance, j'apporte une expertise dans divers outils et technologies de développement web. Compétent dans la création d'interfaces utilisateur dynamiques et réactives en utilisant des technologies telles que React, Next.js et JavaScript natif.",
-
-    "skills": "Compétences",
-    "education": "Éducation",
-    "certifications": "Certifications",
-    "educationList1": "2 ans d'université, Études en anglais",
-    "educationList2": "Lycée",
-    "educationList3": "Centre d'anglais",
-    "certificationList1": "BAC, équivalent du diplôme de fin d'études secondaires",
-    "certificationList2": "Certificat FreeCodeCamp",
-    "certificationList3": "Smart Company en tant que stagiaire"
+    "discreption": "Je suis un développeur web passionné par la création d'applications web engageantes et efficaces. En tant que freelance, j'apporte une expertise dans divers outils et technologies de développement web. Compétent dans la création d'interfaces utilisateur dynamiques et réactives en utilisant des technologies telles que React, Next.js et JavaScript natif."
   },
   "Projects-Section": {
     "project1": "Une excellente application créée avec React et TailwindCSS pour le style et une interface utilisateur incroyable.",

@@ -11,11 +11,20 @@ export const metadata = {
 
 export default function LocaleLayout({ children }) {
   const messages = useMessages()
-  const locale = useLocale()  
+  const locale = useLocale()
   return (
     <html lang={locale}>
       <link rel="icon" href="/favicon.svg" />
-      <body className={inter.className}>
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        defer
+      />
+
+      <body
+        className={`${inter.className} bg-[#121212] overflow-y-scroll overflow-x-hidden`}
+      >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

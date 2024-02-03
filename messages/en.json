@@ -13,18 +13,12 @@
     "download": "Download / View CV",
     "hire": "Reach out"
   },
+  "Skills-Section": {
+    "title": " Technologies I use"
+  },
   "About-Section": {
     "title": "  About",
-    "discreption": "I'm a passionate web developer with a love for crafting engaging and efficient web applications. As a freelancer, I bring expertise in various web development tools and technologies. Proficient in crafting dynamic and responsive user interfaces using technologies like React, Next.js, and vanilla Javascript",
-    "skills": "Skills",
-    "education": "Education",
-    "certifications": "Certifications",
-    "educationList1": "2 Years University, English Studies",
-    "educationList2": "high school",
-    "educationList3": "English Center",
-    "certificationList1": "BAC, high school diploma equivalent",
-    "certificationList2": "Freecodecamp certificate",
-    "certificationList3": "smart company certificate as intern"
+    "discreption": "I'm a passionate web developer with a love for crafting engaging and efficient web applications. As a freelancer, I bring expertise in various web development tools and technologies. Proficient in crafting dynamic and responsive user interfaces using technologies like React, Next.js, and vanilla Javascript"
   },
   "Projects-Section": {
     "project1": "great app created with react and tailwindCSS for styling and amazing user-interface.",

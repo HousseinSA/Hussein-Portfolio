@@ -61,7 +61,7 @@ const HeroSection = () => {
             alt="personal"
             width={350}
             height={350}
-            sizes="(min-width: 980px) 342px, (min-width: 780px) calc(63.89vw - 271px), (min-width: 520px) 342px, calc(97vw - 143px)"
+            sizes="(min-width: 1500px) 342px, (min-width: 1040px) calc(25.68vw - 38px), (min-width: 780px) calc(31.25vw - 79px), (min-width: 520px) 342px, calc(97vw - 143px)"
             className="rounded-full  border-4 border-[#BED250] border-double"
           />
         </div>

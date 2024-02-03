@@ -39,7 +39,10 @@ const ContactSection = () => {
   const isArabic = locale === "arabic"
   const contactSection = useTranslations("Contact-Section")
   return (
-    <section className="text-white md-20 " id="contact" data-aos="zoom-in-up">
+    <section className="text-white md-20
+     " id="contact"
+      // data-aos="zoom-in-up"
+      >
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-full place-items-center justify-center lg:gap-8 xl:gap-16 pt-20 px-5 lg:px-10 ">
         <div className="flex flex-col justify-between gap-3">
           <div>
@@ -59,7 +62,7 @@ const ContactSection = () => {
               <FaGithub className="hover:scale-110 transition duration-200" />
             </Link>
             <Link
-              href={"https://www.linkedin.com/in/husseinsa/"}
+              href={"     "}
               target="_blank"
             >
               <FaLinkedin className="hover:scale-110 transition duration-200" />

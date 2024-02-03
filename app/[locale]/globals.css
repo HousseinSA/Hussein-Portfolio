@@ -11,3 +11,6 @@ body {
 .direction {
   direction: rtl;
 }
+.icon {
+  color: white;
+}
