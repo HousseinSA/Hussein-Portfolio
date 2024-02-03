@@ -1,6 +1,6 @@
 import Link from "next/link"
-
-const NavLink = ({ href, linkName }) => {
+const NavLink = ({ href, linkName, isActive }) => {
+  // console.log(isActive)
   return (
     <li>
       <Link

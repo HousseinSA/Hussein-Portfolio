@@ -9,7 +9,6 @@ const ParticleComponent = () => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {
-    // await console.log(container)
   }, [])
 
   return (

@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <main>
       <NavBar />
-      <div className="mx-auto py-2 px-8 md:py-4 md:px-12">
+      <div className="mx-auto mt-0 sm:mt-10 px-5 md:px-12">
         <HeroSection />
         <SkillsComponent />
         <AboutSection />

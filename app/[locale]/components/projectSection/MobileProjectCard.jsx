@@ -3,7 +3,7 @@ import ProjectLinks from "./ProjectLink"
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
-const ProjectCard = ({ imgUrl, title, descreption, links }) => {
+const MobileProjectCard = ({ imgUrl, title, descreption, links }) => {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -11,7 +11,7 @@ const ProjectCard = ({ imgUrl, title, descreption, links }) => {
   })
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1])
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1])
- 
+
   return (
     <motion.div
       ref={ref}
@@ -32,8 +32,10 @@ const ProjectCard = ({ imgUrl, title, descreption, links }) => {
             alt={title}
           />
           <div className="absolute hidden top-0 md:flex justify-center gap-4 p-4 items-center left-0 bg-[#181818] h-full w-full opacity-0 group-hover:flex group-hover:opacity-80 transition-all duration-500 cursor-pointer">
-            <div className="text-white bg-[#181818] -translate-y-[100%] group-hover:translate-y-0 duration-500 transition max-w-96">
-              <h5 className="text-xl font-semibold mb-2">{title}</h5>
+            <div className=" bg-[#181818] -translate-y-[100%] group-hover:translate-y-0 duration-500 transition max-w-96">
+              <h5 className="text-xl font-semibold mb-2 text-[#BED250] ">
+                {title}
+              </h5>
               <p className="text-[#ADB7BE]">{descreption}</p>
             </div>
             <ProjectLinks links={links} />
@@ -44,4 +46,4 @@ const ProjectCard = ({ imgUrl, title, descreption, links }) => {
   )
 }
 
-export default ProjectCard
+export default MobileProjectCard

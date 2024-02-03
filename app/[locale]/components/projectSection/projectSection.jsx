@@ -1,6 +1,6 @@
 import React from "react"
-import ProjectCard from "./ProjectCard"
-import ProjectCardTesting from "../projectTesting/Project"
+import MobileProjectCard from "./MobileProjectCard"
+import BigScreenProjectCard from "./BigScreenProjectCard"
 import { useState, useEffect } from "react"
 import { useProjectContent } from "../../../utils/projectcontent"
 const ProjectSlider = () => {
@@ -11,7 +11,6 @@ const ProjectSlider = () => {
       setIsMobile(window.innerWidth <= 640)
     }
 
-    // Initial check on mount
     handleResize()
 
     // Add event listener for window resize
@@ -31,7 +30,7 @@ const ProjectSlider = () => {
       {projects.map(({ id, title, descreption, Image, links, tags }) => (
         <div key={id}>
           {isMobile ? (
-            <ProjectCard
+            <MobileProjectCard
               key={id}
               imgUrl={Image}
               title={title}
@@ -39,12 +38,13 @@ const ProjectSlider = () => {
               links={links}
             />
           ) : (
-            <ProjectCardTesting
+            <BigScreenProjectCard
               title={title}
               key={id}
               description={descreption}
               imageUrl={Image}
               tags={tags}
+              links={links}
             />
           )}
         </div>

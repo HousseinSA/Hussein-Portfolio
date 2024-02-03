@@ -16,12 +16,6 @@ export default function LocaleLayout({ children }) {
     <html lang={locale}>
       <link rel="icon" href="/favicon.svg" />
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        defer
-      />
-
       <body
         className={`${inter.className} bg-[#121212] overflow-y-scroll overflow-x-hidden`}
       >
