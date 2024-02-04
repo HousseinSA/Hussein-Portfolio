@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import MobileProjectCard from "./MobileProjectCard"
 import BigScreenProjectCard from "./BigScreenProjectCard"

@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import SkillImage from "./SkillImage"
 import { useTechImages } from "../../../utils/projectcontent"
 import { useTranslations, useLocale } from "next-intl"

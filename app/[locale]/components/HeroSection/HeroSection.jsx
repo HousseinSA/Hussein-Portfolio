@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import React from 'react'
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"

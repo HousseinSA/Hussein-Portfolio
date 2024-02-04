@@ -1,4 +1,5 @@
-import LottieImage from "./lottieImages/LottieImage"
+// import LottieImage from "./lottieImages/LottieImage"
+import React from "react"
 import { useLocale, useTranslations } from "next-intl"
 import Reveal from "../Layout/RevealAnimation/Reveal"
 import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
@@ -14,7 +15,7 @@ const AboutSection = () => {
         className="text-white flex items-center px-5 lg:px-10"
       >
         <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center justify-center mb-10  ">
-          <LottieImage />
+          {/* <LottieImage /> */}
           <div
             className={`mt-4 w-fit h-auto md:mt-0 px-0 sm:px-4 ${
               isArabic ? "text-right" : "text-left"
@@ -40,3 +41,5 @@ const AboutSection = () => {
 }
 
 export default AboutSection
+
+

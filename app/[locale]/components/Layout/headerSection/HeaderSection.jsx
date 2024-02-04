@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa6"
 import { IoMdClose } from "react-icons/io"
 import NavMenu from "./Nav/NavMenu"
 import MobileNav from "./MobileNav"
-const NavBar = () => {
+const HeaderSection = () => {
   const [openNav, setOpenNav] = useState(false)
   const [headerOnScroll, setHeaderOnScroll] = useState(false)
 
@@ -67,4 +67,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default HeaderSection

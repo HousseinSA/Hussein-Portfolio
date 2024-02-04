@@ -1,15 +1,14 @@
-"use client"
 import HeroSection from "./components/HeroSection/HeroSection"
-import NavBar from "./components/Layout/headerSection/HeaderSection"
+import HeaderSection from "./components/Layout/headerSection/HeaderSection"
 import AboutSection from "./components/aboutSection/AboutSection"
 import ProjectSection from "./components/projectSection/projectSection"
 import ContactSection from "./components/ContactSection/ContactSection"
 import SkillsComponent from "./components/SkillsSection/Skills"
-const Home = () => {
-
+const Home = async ({params:{lang}}) => {
+  console.log(lang)
   return (
     <main>
-      <NavBar />
+      <HeaderSection />
       <div className="mx-auto mt-0 sm:mt-10 px-5 md:px-12">
         <HeroSection />
         <SkillsComponent />
