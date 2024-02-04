@@ -1,5 +1,4 @@
 import Image from "next/image"
-
 import ProjectLinks from "./ProjectLink"
 import Reveal from "../Layout/RevealAnimation/Reveal"
 

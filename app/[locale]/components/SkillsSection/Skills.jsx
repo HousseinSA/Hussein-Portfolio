@@ -3,7 +3,7 @@ import SkillImage from "./SkillImage"
 import { useTechImages } from "../../../utils/projectcontent"
 import { useTranslations, useLocale } from "next-intl"
 import Reveal from "../Layout/RevealAnimation/Reveal"
-import TitleAnimation from '../Layout/RevealAnimation/TitleAnimation'
+import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
 const SkillsComponent = () => {
   const skills = useTranslations("Skills-Section")
   const locale = useLocale()

@@ -12,12 +12,9 @@ const ProjectSlider = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640)
     }
-
     handleResize()
-
     // Add event listener for window resize
     window.addEventListener("resize", handleResize)
-
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize)
