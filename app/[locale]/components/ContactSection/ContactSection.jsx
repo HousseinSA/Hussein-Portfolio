@@ -8,6 +8,8 @@ import Link from "next/link"
 import FooterSection from "../Layout/FooterSection"
 import { useLocale, useTranslations } from "next-intl"
 import Reveal from "../Layout/RevealAnimation/Reveal"
+import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
+
 const ContactSection = () => {
   const [from, setFrom] = useState("")
   const [subject, setSubject] = useState("")
@@ -49,13 +51,15 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 h-full lg:grid-cols-2 w-full place-items-center justify-center lg:gap-8 xl:gap-16 my-5">
           <div className="flex flex-col justify-between gap-3">
             <div>
-              <h1
-                className={`text-4xl font-bold ${
-                  isArabic ? "md:text-right" : "md:text-left"
-                } text-center text-[#BED250] mb-4`}
-              >
-                {contactSection("title")}
-              </h1>
+              <TitleAnimation>
+                <h1
+                  className={`text-4xl font-bold ${
+                    isArabic ? "md:text-right" : "md:text-left"
+                  } text-center text-[#BED250] mb-4`}
+                >
+                  {contactSection("title")}
+                </h1>
+              </TitleAnimation>
               <p className="text-base text-center lg:text-start lg:text-lg text-[#adb7be]">
                 {contactSection("content")}
               </p>
@@ -86,7 +90,7 @@ const ContactSection = () => {
           </div>
           <div className="w-full h-auto">
             <form onSubmit={handelSubmit}>
-              <div className="flex flex-col gap-4 justify-center bg-[#181818] py-0 md:py-5 rounded-md md:px-4 ">
+              <div className="flex flex-col gap-4 justify-center bg-[#181818] py-0 md:py-5 rounded-md px-4 ">
                 <div>
                   <label className="mb-2 block text-[#BED250]" htmlFor="email">
                     {contactSection("email")}

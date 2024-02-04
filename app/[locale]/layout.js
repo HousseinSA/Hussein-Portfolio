@@ -15,7 +15,6 @@ export default function LocaleLayout({ children }) {
   return (
     <html lang={locale}>
       <link rel="icon" href="/favicon.svg" />
-
       <body
         className={`${inter.className} bg-[#121212] overflow-y-scroll overflow-x-hidden`}
       >

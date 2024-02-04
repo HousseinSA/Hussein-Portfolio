@@ -16,10 +16,10 @@ const HeroSection = () => {
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
   return (
     <Reveal>
-      <section className="relative h-auto sm:h-screen mt-40 md:mt-0">
-        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center flex-col mb-10 lg:mb-0 px-10">
+      <section className="relative sm:mt-20 lg:mt-0 h-screen">
+        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center lg:justify-around flex-col mb-10 lg:mb-0 px-10">
           <div
-            className={`px-4 text-center ${
+            className={`px-4  lg:flex-1 text-center ${
               isArabic ? "md:text-right" : "md:text-left"
             } z-10`}
           >
@@ -69,6 +69,7 @@ const HeroSection = () => {
               alt="personal"
               width={350}
               height={350}
+              priority
               sizes="(min-width: 1500px) 342px, (min-width: 1040px) calc(25.68vw - 38px), (min-width: 780px) calc(31.25vw - 79px), (min-width: 520px) 342px, calc(97vw - 143px)"
               className="rounded-full  border-4 border-[#BED250] border-double"
             />

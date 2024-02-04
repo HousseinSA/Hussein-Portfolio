@@ -26,7 +26,7 @@ const NavBar = () => {
       } transition duration-300 z-20 fixed top-0 left-0 right-0`}
     >
       <header
-        className={` px-5 md:px-8 flex  justify-between  flex-wrap items-center`}
+        className={`px-5 md:px-8 flex justify-between flex-wrap items-center`}
       >
         <Link href={"/"} className="text-5xl  font-semibold">
           <Image
@@ -38,7 +38,7 @@ const NavBar = () => {
             alt="website logo"
           />
         </Link>
-        <div className="block md:hidden text-white">
+        <div className="block md:hidden mr-5 text-white">
           {openNav ? (
             <button
               onClick={() => setOpenNav(false)}

@@ -1,6 +1,7 @@
-// import LottieImage from "./lottieImages/LottieImage"
+import LottieImage from "./lottieImages/LottieImage"
 import { useLocale, useTranslations } from "next-intl"
 import Reveal from "../Layout/RevealAnimation/Reveal"
+import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
 const AboutSection = () => {
   const about = useTranslations("About-Section")
   const locale = useLocale()
@@ -11,16 +12,15 @@ const AboutSection = () => {
       <section
         id="about"
         className="text-white flex items-center px-5 lg:px-10"
-        // data-aos="zoom-in-up"/
       >
         <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center justify-center mb-10  ">
-          {/* <LottieImage /> */}
+          <LottieImage />
           <div
-            className={`mt-4 md:mt-0 px-4 ${
+            className={`mt-4 w-fit h-auto md:mt-0 px-0 sm:px-4 ${
               isArabic ? "text-right" : "text-left"
             } flex flex-col  justify-center`}
           >
-            <Reveal>
+            <TitleAnimation>
               <h1
                 className={`text-4xl text-center ${
                   isArabic ? "lg:text-right" : "lg:text-left"
@@ -28,8 +28,10 @@ const AboutSection = () => {
               >
                 {about("title")}
               </h1>
-            </Reveal>
-            <p className="text-base lg:text-lg">{about("discreption")}</p>
+            </TitleAnimation>
+            <p className="text-base text-center sm:text-left lg:text-lg">
+              {about("discreption")}
+            </p>
           </div>
         </div>
       </section>
