@@ -1,5 +1,17 @@
-// @type {import('next').NextConfig}
+// import createNextIntlPlugin from "next-intl/plugin"
+
+// const withNextIntl = createNextIntlPlugin()
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {}
+
+// export default withNextIntl(nextConfig)
+
+// @ts-check
+
+const withNextIntl = require("next-intl/plugin")()
+
+/** @type {import('next').NextConfig} */
 const config = {}
-const withNextIntl = require("next-intl/plugin")("./i18n.js")
 
 module.exports = withNextIntl(config)

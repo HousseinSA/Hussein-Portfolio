@@ -1,6 +1,7 @@
 import NavLink from "./NavLink"
 import LanguageSwitcher from "../LanguageSwitcher"
 import { useTranslations } from "next-intl"
+
 const NavMenu = () => {
   const navbar = useTranslations("Navbar")
   const navLinks = [

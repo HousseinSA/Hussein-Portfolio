@@ -1,5 +1,5 @@
 import NavLink from "./Nav/NavLink"
-import LanguageSwitcher from "./LanguageSwitcher"
+// import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
 const MobileNav = () => {
   const navbar = useTranslations("Navbar")
@@ -13,7 +13,7 @@ const MobileNav = () => {
         <NavLink href={"#about"} linkName={navbar("about")} />
         <NavLink href={"#work"} linkName={navbar("work")} />
         <NavLink href={"#contact"} linkName={navbar("contact")} />
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
       </ul>
     </nav>
   )
