@@ -26,7 +26,7 @@ const NavBar = () => {
       } transition duration-300 z-20 fixed top-0 left-0 right-0`}
     >
       <header
-        className={`px-5 md:px-8 flex justify-between flex-wrap items-center`}
+        className={`px-5 md:px-8 py-2 flex justify-between flex-wrap items-center`}
       >
         <Link href={"/"} className="text-5xl  font-semibold">
           <Image
@@ -34,7 +34,12 @@ const NavBar = () => {
             priority
             width={70}
             height={70}
-            className="w-full max-w-full h-auto"
+            sizes="(min-width: 1500px) 342px,
+                          (min-width: 1040px) calc(25.68vw - 38px),
+                          (min-width: 780px) calc(31.25vw - 79px),
+                          (min-width: 520px) 342px,
+                          calc(97vw - 143px)
+                        "
             alt="website logo"
           />
         </Link>
