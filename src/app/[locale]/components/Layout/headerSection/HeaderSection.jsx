@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import { FaBars } from "react-icons/fa6"
 import { IoMdClose } from "react-icons/io"
-// import NavMenu from "./Nav/NavMenu"
+import NavMenu from "./Nav/NavMenu"
 import MobileNav from "./MobileNav"
 const HeaderSection = () => {
   const [openNav, setOpenNav] = useState(false)
@@ -60,7 +60,7 @@ const HeaderSection = () => {
             </button>
           )}
         </div>
-        {/* {!openNav && <NavMenu />} */}
+        {!openNav && <NavMenu />}
       </header>
       {openNav && <MobileNav />}
     </section>

@@ -4,8 +4,8 @@ import AboutSection from "./components/aboutSection/AboutSection"
 import ProjectSection from "./components/projectSection/projectSection"
 import ContactSection from "./components/ContactSection/ContactSection"
 import SkillsComponent from "./components/SkillsSection/Skills"
-const Home = async ({params:{lang}}) => {
-  console.log(lang)
+const Home = async ({ params: { locale } }) => {
+  console.log(locale)
   return (
     <main>
       <HeaderSection />

@@ -25,6 +25,6 @@
     "**/*.tsx",
     "src/app/not-found.js",
     "app/[locale]/components/SkillsSection/Skills.jsx"
-  ],
+, "src/app/[locale]/components/Layout/headerSection/LanguageSwitcher.jsx"  ],
   "exclude": ["node_modules"]
 }

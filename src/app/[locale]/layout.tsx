@@ -8,7 +8,7 @@ export const metadata = {
   description: "a portfolio to showcase my work.",
 }
 
-export default function LocaleLayout({
+export default function RootLayout({
   children,
   params: { locale },
 }: {
