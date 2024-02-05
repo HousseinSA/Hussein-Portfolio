@@ -6,7 +6,8 @@ import { useState, useEffect } from "react"
 import { useLocale, useTranslations } from "next-intl"
 import { useProjectContent } from "../../../utils/projectcontent"
 import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
-const ProjectSlider = () => {
+import Reveal from "../Layout/RevealAnimation/Reveal"
+const ProjectSection = () => {
   const { projects } = useProjectContent()
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
@@ -25,43 +26,43 @@ const ProjectSlider = () => {
   const locale = useLocale()
   const isArabic = locale === "ar"
   return (
-    <section id="work" className="h-full w-full py-10 sm:px-4 lg:px-10">
-      <TitleAnimation>
-        <h1
-          className={`text-4xl text-center ${
-            isArabic ? "lg:text-right" : "lg:text-left"
-          } font-bold text-[#BED250] mb-12`}
-        >
-          {work("title")}
-        </h1>
-      </TitleAnimation>
-      <div className="flex flex-col justify-center items-center gap-5 w-full h-full  ">
-        {projects.map(({ id, title, descreption, Image, links, tags }) => (
-          <>
-            {isMobile ? (
-              <div className="w-full" key={id}>
+    <Reveal>
+      <section id="work" className="pb-10 sm:px-4 lg:px-10 w-full h-full">
+        <TitleAnimation>
+          <h1
+            className={`text-4xl text-center ${
+              isArabic ? "lg:text-right" : "lg:text-left"
+            } font-bold text-[#BED250] mb-12`}
+          >
+            {work("title")}
+          </h1>
+        </TitleAnimation>
+        <div className="flex flex-col justify-center items-center gap-5 w-full h-full">
+          {projects.map(({ id, title, descreption, Image, links, tags }) => (
+            <div key={id}>
+              {isMobile ? (
                 <MobileProjectCard
                   imgUrl={Image}
                   title={title}
                   descreption={descreption}
                   links={links}
                 />
-              </div>
-            ) : (
-              <BigScreenProjectCard
-                title={title}
-                key={id}
-                description={descreption}
-                imageUrl={Image}
-                tags={tags}
-                links={links}
-              />
-            )}
-          </>
-        ))}
-      </div>
-    </section>
+              ) : (
+                <BigScreenProjectCard
+                  title={title}
+                  key={title}
+                  description={descreption}
+                  imageUrl={Image}
+                  tags={tags}
+                  links={links}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    </Reveal>
   )
 }
 
-export default ProjectSlider
+export default ProjectSection

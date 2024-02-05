@@ -2,6 +2,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 import { NextIntlClientProvider, useMessages } from "next-intl"
+import ArrowNavigator from "./components/Layout/ArrowNavigator"
 
 export const metadata = {
   title: "hussein's portfolio",
@@ -18,13 +19,14 @@ export default function RootLayout({
   const messages = useMessages()
   return (
     <html lang={locale}>
-      {/* <link rel="icon" href="/favicon.svg" /> */}
+      <link rel="icon" href="/favicon.svg" />
       <body
-        className={`${inter.className} bg-[#121212] overflow-y-scroll overflow-x-hidden`}
+        className={`${inter.className} relative bg-[#121212] overflow-y-scroll overflow-x-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <ArrowNavigator />
       </body>
     </html>
   )

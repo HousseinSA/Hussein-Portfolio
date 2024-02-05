@@ -1,10 +1,10 @@
 "use client"
 import React from "react"
 import SkillImage from "./SkillImage"
-import { useTechImages } from "../../../utils/projectcontent"
+import { useTechImages } from "../../../../utils/projectcontent"
 import { useTranslations, useLocale } from "next-intl"
-import Reveal from "../Layout/RevealAnimation/Reveal"
-import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
+import Reveal from "../../Layout/RevealAnimation/Reveal"
+import TitleAnimation from "../../Layout/RevealAnimation/TitleAnimation"
 const SkillsComponent = () => {
   const skills = useTranslations("Skills-Section")
   const locale = useLocale()
@@ -12,11 +12,11 @@ const SkillsComponent = () => {
   const { frontEndSkills, backendSkills, tools } = useTechImages()
   return (
     <Reveal>
-      <section>
+      <section> 
         <div
           className={`mt-4 md:mt-0 px-4 ${
             isArabic ? "text-right" : "text-left"
-          } flex flex-col  justify-center`}
+          } flex flex-col justify-center`}
         >
           <TitleAnimation>
             <h1

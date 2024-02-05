@@ -22,7 +22,7 @@ const HeaderSection = () => {
   return (
     <section
       className={` ${
-        headerOnScroll ? "bg-black/75" : "bg-black/20"
+        headerOnScroll ? "bg-black/75" : "bg-black/35"
       } transition duration-300 z-20 fixed top-0 left-0 right-0`}
     >
       <header
