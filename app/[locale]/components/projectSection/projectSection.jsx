@@ -41,7 +41,7 @@ const ProjectSection = () => {
           {projects.map(({ id, title, descreption, Image, links, tags }) => (
             <div key={id}>
               {isMobile ? (
-                <MobileProjectCard
+                <MobileProjectCard  yyy
                   imgUrl={Image}
                   title={title}
                   descreption={descreption}
