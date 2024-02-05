@@ -1,8 +1,11 @@
 import NavLink from "./NavLink"
 import LanguageSwitcher from "../LanguageSwitcher"
 import { useTranslations } from "next-intl"
+<<<<<<< HEAD
 import useVisibleSectionId from "../../../../../utils/sectionIdinViewPort"
 
+=======
+>>>>>>> parent of 3a3f531 (fixing)
 const NavMenu = () => {
   const visibleSectionId = useVisibleSectionId()
   const navbar = useTranslations("Navbar")
