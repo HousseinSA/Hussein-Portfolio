@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-const withNextIntl = require("next-intl/plugin")()
+const createNextIntlPlugin = require("next-intl/plugin")
+
+const withNextIntl = createNextIntlPlugin()
 
 /** @type {import('next').NextConfig} */
-=======
-// @type {import('next').NextConfig}
-const config = {}
-const withNextIntl = require("next-intl/plugin")("./i18n.js")
->>>>>>> parent of 3a3f531 (fixing)
+const nextConfig = {}
 
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = withNextIntl(nextConfig)
+export default withNextIntl(nextConfig)
