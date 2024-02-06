@@ -13,8 +13,7 @@ const AboutSection = () => {
     <Reveal>
       <section
         id="about"
-        clas
-        sName="text-white flex  items-center px-5 lg:px-10"
+        className="text-white flex  items-center px-5 lg:px-10"
       >
         <div>
           <SkillsComponent />
@@ -34,7 +33,7 @@ const AboutSection = () => {
                   {about("title")}
                 </h1>
               </TitleAnimation>
-              <p className="text-base text-[#adb7be] text-center sm:text-left lg:text-lg">
+              <p className="text-base text-center sm:text-left lg:text-lg">
                 {about("discreption")}
               </p>
             </div>

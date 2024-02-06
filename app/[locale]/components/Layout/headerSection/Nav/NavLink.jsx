@@ -1,6 +1,5 @@
 import Link from "next/link"
 const NavLink = ({ href, linkName, sectionInView }) => {
-  console.log(sectionInView)
   const inViewBackgournd =
     "  text-transparent from-[#BED250] bg-clip-text to-[#109C81]  bg-gradient-to-r"
   const hoverBackground =

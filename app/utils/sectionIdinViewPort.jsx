@@ -15,7 +15,6 @@ function useVisibleSectionId() {
           rect.top >= -threshold &&
           rect.bottom <= window.innerHeight + threshold
         ) {
-          console.log(section.id)
           setVisibleSectionId(section.id)
           return
         }

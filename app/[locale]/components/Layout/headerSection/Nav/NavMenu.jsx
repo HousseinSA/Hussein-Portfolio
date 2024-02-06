@@ -12,7 +12,7 @@ const NavMenu = () => {
     { href: "#contact", linkname: navbar("contact") },
   ]
   const hashvisibleSectionId = "#" + visibleSectionId
-  // console.log(hashvisibleSectionId, "section name", visibleSectionId)
+
   return (
     <ul className="hidden text-white font-semibold md:flex p-4 md:p-0 md:space-x-8 items-center">
       {navLinks?.map(({ href, linkname }, index) => {
