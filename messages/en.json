@@ -21,13 +21,13 @@
     "discreption": "I've always been a tech enthusiast, fascinated by the amazing world of technology. I enjoyed tweaking my computer and smartphone, adding mods to them. Then, I decided to enter the programming world to create things that others could see and be amazed by. Since I like people to see my work, I leaned more towards frontend development. I've been enjoying working with all its languages and technologies"
   },
   "Projects-Section": {
-    "title":"Selected Projects",
+    "title": "Selected Projects",
     "project1": "great app created with react and tailwindCSS for styling and amazing user-interface.",
-    "project2": "Great Ebook store created with react and tailwindCSs and mongodb for database and other amazing tools.",
-    "project3": "i document app created using reactjs for frontend and socket.io and mongodb for backend for an sync document editing in real time",
-    "project4": "weather app created using react and tailwindcss that gives real time weather informations with other info.",
+    "project2": "A React-based ebook store with Tailwind CSS and MongoDB, featuring other amazing tools.",
+    "project3": "Document app with real-time editing using React.js, Socket.IO, and MongoDB.",
+    "project4": "Weather app with real-time updates, built using React and Tailwind CSS",
     "project5": "an budget manager created with react for frontend and tailwindCSS for styling.",
-    "project6": "Google search engie clone created using nextjs for frentend and api route for backend and tailwind for styling beautifull user interface inspiered by google search"
+    "project6": "Google-like search engine built with Next.js frontend, API routes for backend, and Tailwind CSS for UI."
   },
   "Contact-Section": {
     "title": "Let's Connect",

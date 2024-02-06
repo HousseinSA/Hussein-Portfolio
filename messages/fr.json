@@ -23,11 +23,11 @@
   "Projects-Section": {
     "title": "Projet sélectionné",
     "project1": "Une excellente application créée avec React et TailwindCSS pour le style et une interface utilisateur incroyable.",
-    "project2": "Super librairie électronique créée avec React et TailwindCSS, utilisant MongoDB comme base de données et d'autres outils incroyables.",
-    "project3": "Une application de documentation créée avec ReactJS pour le frontend, Socket.io et MongoDB pour le backend, permettant l'édition de documents en temps réel de manière synchronisée.",
-    "project4": "Application météo créée avec React et TailwindCSS fournissant des informations météorologiques en temps réel avec d'autres détails.",
-    "project5": "Gestionnaire de budget créé avec React pour le frontend et TailwindCSS pour le style.",
-    "project6": "Clone du moteur de recherche Google créé avec Next.js pour le frontend, des routes API pour le backend, et Tailwind pour un style d'interface utilisateur magnifique inspiré par la recherche Google."
+    "project2": "Une librairie de livres électroniques créée avec React et Tailwind CSS, utilisant MongoDB comme base de données ainsi que d'autres outils incroyables.",
+    "project3": "Application de documents avec édition en temps réel utilisant React.js, Socket.IO et MongoDB.",
+    "project4": "Application météo avec mises à jour en temps réel, construite avec React et Tailwind CSS.",
+    "project5": "Gestionnaire de budget construit avec React pour le frontend et stylisé avec Tailwind CSS.",
+    "project6": "Moteur de recherche similaire à Google construit avec Next.js pour le frontend, des routes API pour le backend, et Tailwind CSS pour l'interface utilisateur."
   },
   "Contact-Section": {
     "title": "Restons Connectés",
