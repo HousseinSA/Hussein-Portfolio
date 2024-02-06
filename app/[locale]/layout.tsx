@@ -10,17 +10,7 @@ export const metadata = {
   description: "a portfolio to showcase my work.",
 }
 
-<<<<<<<< HEAD:app/[locale]/layout.tsx
-export default function RootLayout({
-  children,
-  params: { locale },
-}: {
-  children: React.ReactNode
-  params: { locale: string }
-}) {
-========
 export default function LocaleLayout({ children }) {
->>>>>>>> parent of 3a3f531 (fixing):app/[locale]/layout.js
   const messages = useMessages()
   const locale = useLocale()
   return (
