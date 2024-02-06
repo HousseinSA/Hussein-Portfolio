@@ -44,11 +44,11 @@ const ContactSection = () => {
   return (
     <Reveal>
       <section
-        className="text-white
+        className="
      "
         id="contact"
       >
-        <div className="grid grid-cols-1 h-full lg:grid-cols-2 w-full place-items-center justify-center lg:gap-8 xl:gap-16 my-5">
+        <div className="grid grid-cols-1 h-full md:h-[60%] lg:grid-cols-2 w-full place-items-center justify-center lg:gap-8 xl:gap-16 my-5">
           <div className="flex flex-col justify-between gap-3">
             <div>
               <TitleAnimation>

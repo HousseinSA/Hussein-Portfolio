@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-
+"use client"
+import { useState, useEffect } from "react"
 function useVisibleSectionId() {
   const [visibleSectionId, setVisibleSectionId] = useState(null)
 
@@ -9,11 +9,13 @@ function useVisibleSectionId() {
       const sections = document.querySelectorAll("section[id]")
       for (const section of sections) {
         const rect = section.getBoundingClientRect()
+        const threshold = rect.height * 0.8 // consider more than half visible
+
         if (
-          rect.top >= 0 &&
-          rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight)
+          rect.top >= -threshold &&
+          rect.bottom <= window.innerHeight + threshold
         ) {
+          console.log(section.id)
           setVisibleSectionId(section.id)
           return
         }

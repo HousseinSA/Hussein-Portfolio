@@ -1,7 +1,7 @@
 import HeroSection from "./components/HeroSection/HeroSection"
 import HeaderSection from "./components/Layout/headerSection/HeaderSection"
 import AboutSection from "./components/aboutSection/AboutSection"
-import ProjectSection from "./components/projectSection/projectSection"
+import ProjectSection from "./components/ProjectSection/projectSection"
 import ContactSection from "./components/ContactSection/ContactSection"
 const Home = () => {
   return (
