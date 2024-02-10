@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import React from 'react'
+import React from "react"
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"
@@ -18,7 +18,7 @@ const HeroSection = () => {
   return (
     <Reveal>
       <section className="relative sm:mt-20 lg:mt-0 h-screen">
-        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center lg:justify-around flex-col mb-10 lg:mb-0 px-10">
+        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center lg:justify-around flex-col mb-10 lg:mb-0 z-20 px-10">
           <div
             className={`px-4  lg:flex-1 text-center ${
               isArabic ? "md:text-right" : "md:text-left"
@@ -46,24 +46,24 @@ const HeroSection = () => {
               {hero("aboutme")}
             </p>
             <div>
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white">
-                <Link href={"mailto:nejihoussein1@gmail.com"}>
+              <Link href={"mailto:nejihoussein1@gmail.com"}>
+                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white">
                   {hero("hire")}
-                </Link>
-              </button>
-              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500  mt-3">
-                <span className="block bg-[#181818] hover:bg-slate-800 text-white rounded-full py-2 px-5">
-                  <Link href={resumeLink} target="_blank">
+                </button>
+              </Link>
+              <Link href={resumeLink} target="_blank">
+                <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500  mt-3">
+                  <span className="block bg-[#181818] hover:bg-slate-800 text-white rounded-full py-2 px-5">
                     {hero("download")}
-                  </Link>
-                </span>
-              </button>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
           <div
             className={`${
               isArabic ? "order-last md:order-first" : ""
-            } mt-10 md:mt-0 z-10`}
+            } mt-10 md:mt-0`}
           >
             <Image
               src="/personal-image.png"

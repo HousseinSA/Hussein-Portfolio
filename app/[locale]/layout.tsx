@@ -4,7 +4,6 @@ import { useLocale } from "next-intl"
 const inter = Inter({ subsets: ["latin"] })
 import { NextIntlClientProvider, useMessages } from "next-intl"
 import ArrowNavigator from "./components/Layout/ArrowNavigator"
-
 export const metadata = {
   title: "hussein's portfolio",
   description: "a portfolio to showcase my work.",

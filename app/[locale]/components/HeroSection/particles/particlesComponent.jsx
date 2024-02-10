@@ -8,8 +8,7 @@ const ParticleComponent = () => {
     await loadSlim(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container) => {
-  }, [])
+  const particlesLoaded = useCallback(async (container) => {}, [])
 
   return (
     <Particles
@@ -23,7 +22,7 @@ const ParticleComponent = () => {
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              // mode: "push",
             },
             onHover: {
               enable: true,
@@ -81,7 +80,7 @@ const ParticleComponent = () => {
         },
         detectRetina: true,
       }}
-      className="w-full h-full absolute top-0 left-0 pointer-events-none z-0"
+      className="w-full h-full absolute top-0 left-0 pointer-events-none -z-20"
     />
   )
 }
