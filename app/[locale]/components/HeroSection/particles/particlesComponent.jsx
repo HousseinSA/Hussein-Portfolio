@@ -9,7 +9,6 @@ const ParticleComponent = () => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {}, [])
-
   return (
     <Particles
       id="tsparticles"
