@@ -25,9 +25,9 @@ const ArrowNavigator = () => {
       onClick={handleScrollToTop}
     >
       <div
-        className={`rounded-full cursor-pointer p-5  text-white text-xl hover:bg-[#BED250] active:scale-95 hover:scale-110 bg-[#BED250]/25`}
+        className={`rounded-full cursor-pointer p-3 md:p-5  text-white text-xl hover:bg-[#BED250] active:scale-95 hover:scale-110 bg-[#BED250]/25`}
       >
-        <FaArrowUp size={20} color="white" />
+        <FaArrowUp className="text-base md:text-xl" color="white" />
       </div>
     </div>
   )

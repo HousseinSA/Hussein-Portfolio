@@ -18,12 +18,11 @@ const HeaderSection = () => {
     window.addEventListener("scroll", checkingScroll)
     return () => window.removeEventListener("scroll", checkingScroll)
   }, [])
-
+  const headerBackground =
+    !headerOnScroll === !openNav ? "bg-transparent" : "bg-black/80"
   return (
     <section
-      className={` ${
-        headerOnScroll ? "bg-black/75" : "bg-black/35"
-      } transition duration-300 z-20 fixed top-0 left-0 right-0`}
+      className={` ${headerBackground} transition duration-300 z-20 fixed top-0 left-0 right-0`}
     >
       <header
         className={`px-5 md:px-8 py-2 flex justify-between flex-wrap items-center`}

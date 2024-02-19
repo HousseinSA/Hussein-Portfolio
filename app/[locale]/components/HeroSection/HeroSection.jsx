@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import React from "react"
 import Link from "next/link"
 import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"
@@ -18,11 +17,11 @@ const HeroSection = () => {
   return (
     <Reveal>
       <section className="relative sm:mt-20 lg:mt-0 h-screen">
-        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center lg:justify-around flex-col mb-10 lg:mb-0 z-20 px-10">
+        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center lg:justify-around flex-col mb-10 lg:mb-0 z-10 px-10">
           <div
             className={`px-4  lg:flex-1 text-center ${
               isArabic ? "md:text-right" : "md:text-left"
-            } z-10`}
+            } `}
           >
             <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r text-right from-[#BED250] to-[#109C81]">
@@ -38,19 +37,19 @@ const HeroSection = () => {
                   hero("work2"),
                 ]}
                 wrapper="span"
-                speed={25}
+                speed={20}
                 repeat={Infinity}
               />
             </h1>
             <p className="text-[#adb7be] text-dir mb-6 text-base sm:text-lg lg:text-xl">
               {hero("aboutme")}
             </p>
-            <div>
-              <Link href={"mailto:nejihoussein1@gmail.com"}>
-                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white">
-                  {hero("hire")}
-                </button>
-              </Link>
+            <div className="z-20">
+              {/* <Link href={"mailto:nejihoussein1@gmail.com"}> */}
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white">
+                {hero("hire")}
+              </button>
+              {/* </Link> */}
               <Link href={resumeLink} target="_blank">
                 <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500  mt-3">
                   <span className="block bg-[#181818] hover:bg-slate-800 text-white rounded-full py-2 px-5">
