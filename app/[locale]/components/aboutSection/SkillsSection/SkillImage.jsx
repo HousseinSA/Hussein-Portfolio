@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { TbBrandNextjs } from "react-icons/tb"
+import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb"
 import { FaGithub } from "react-icons/fa"
 import { SiExpress } from "react-icons/si"
 import Image from "next/image"
@@ -25,8 +25,10 @@ const SkillImage = ({ index, imgLink, title }) => {
         <FaGithub size={70} color="white" />
       ) : title === "express" ? (
         <SiExpress size={70} color="white" />
+      ) : title === "Tailwind" ? (
+        <TbBrandTailwind size={70} color="teal" />
       ) : (
-        <Image  
+        <Image
           src={imgLink && imgLink}
           alt={title}
           width={70}

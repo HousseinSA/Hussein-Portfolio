@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { useLocale, useTranslations } from "next-intl"
 import { useProjectContent } from "../../../utils/projectcontent"
 import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
-export const ProjectSection = () => {
+export const AppSection = () => {
   const { projects } = useProjectContent()
   const [isMobile, setIsMobile] = useState(false)
 
@@ -14,7 +14,6 @@ export const ProjectSection = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640)
     }
-
     handleResize()
 
     // Add event listener for window resize
@@ -50,7 +49,7 @@ export const ProjectSection = () => {
                 title={title}
                 descreption={descreption}
                 links={links}
-                key={id} // Provide the key here
+                key={id}
               />
             </div>
           ) : (
@@ -68,4 +67,4 @@ export const ProjectSection = () => {
     </section>
   )
 }
-
+export default AppSection

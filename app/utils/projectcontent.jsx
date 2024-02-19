@@ -117,8 +117,8 @@ export function useTechImages() {
     },
     {
       language: "Tailwind",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      imgLink: undefined,
+      // "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     },
     {
       language: "Bootstrap",
