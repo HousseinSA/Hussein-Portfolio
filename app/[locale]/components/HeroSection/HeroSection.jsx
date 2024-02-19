@@ -14,6 +14,11 @@ const HeroSection = () => {
     locale === "fr" || locale === "ar"
       ? "https://drive.google.com/file/d/1VFvGw_JwM5QNK-vsRKN0n_nTkQP4z78I/view?usp=drive_link"
       : "https://drive.google.com/file/d/1flEfVu5DwFayeTeI3YhbNULU4sdYBxKw/view?usp=drive_link"
+
+  const handleMail = () => {
+    window.location.href = "mailto:nejihoussein1@gmail.com"
+  }
+
   return (
     <Reveal>
       <section className="relative sm:mt-20 lg:mt-0 h-screen">
@@ -45,11 +50,13 @@ const HeroSection = () => {
               {hero("aboutme")}
             </p>
             <div className="z-20">
-              {/* <Link href={"mailto:nejihoussein1@gmail.com"}> */}
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white">
+              <button
+                onClick={handleMail}
+                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white"
+                aria-label={hero("hire")}
+              >
                 {hero("hire")}
               </button>
-              {/* </Link> */}
               <Link href={resumeLink} target="_blank">
                 <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500  mt-3">
                   <span className="block bg-[#181818] hover:bg-slate-800 text-white rounded-full py-2 px-5">
