@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { useLocale, useTranslations } from "next-intl"
 import { useProjectContent } from "../../../utils/projectcontent"
 import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
-const ProjectSection = () => {
+export const ProjectSection = () => {
   const { projects } = useProjectContent()
   const [isMobile, setIsMobile] = useState(false)
 
@@ -69,4 +69,3 @@ const ProjectSection = () => {
   )
 }
 
-export default ProjectSection
