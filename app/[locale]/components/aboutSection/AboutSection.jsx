@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl"
 import Reveal from "../Layout/RevealAnimation/Reveal"
 import TitleAnimation from "../Layout/RevealAnimation/TitleAnimation"
 import SkillsComponent from "./SkillsSection/Skills"
+
 const AboutSection = () => {
   const about = useTranslations("About-Section")
   const locale = useLocale()
@@ -13,17 +14,13 @@ const AboutSection = () => {
     <Reveal>
       <section
         id="about"
-        className="text-white flex  items-center px-5 lg:px-10"
+        className="text-white flex items-center px-5 lg:px-10"
       >
         <div>
           <SkillsComponent />
-          <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center justify-center  ">
+          <div className="flex flex-col lg:flex-row gap-3 md:gap-16 items-center">
             <LottieImage />
-            <div
-              className={`mt-4 w-fit h-auto md:mt-0 px-0 sm:px-4 ${
-                isArabic ? "text-right" : "text-left"
-              } flex flex-col  justify-center`}
-            >
+            <div className="flex flex-col justify-end">
               <TitleAnimation>
                 <h1
                   className={`text-4xl text-center ${
@@ -33,8 +30,12 @@ const AboutSection = () => {
                   {about("title")}
                 </h1>
               </TitleAnimation>
-              <p className="text-base text-center sm:text-left lg:text-lg">
-                {about("discreption")}
+              <p
+                className={`text-base ${
+                  isArabic ? "text-right" : "text-left"
+                } lg:text-lg mb-4`}
+              >
+                {about("description")}
               </p>
             </div>
           </div>

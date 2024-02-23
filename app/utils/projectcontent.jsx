@@ -113,12 +113,12 @@ export function useTechImages() {
     {
       language: "PHP",
       imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     },
     {
       language: "Tailwind",
-      imgLink: undefined,
-      // "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      imgLink:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     },
     {
       language: "Bootstrap",

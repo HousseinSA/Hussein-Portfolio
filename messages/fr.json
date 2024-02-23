@@ -18,7 +18,7 @@
   },
   "About-Section": {
     "title": "À propos",
-    "discreption": "J'ai toujours été un passionné de technologie, fasciné par le monde étonnant de la technologie. J'aimais ajuster mon ordinateur et mon smartphone, y ajoutant des modifications. Ensuite, j'ai décidé d'entrer dans le monde de la programmation pour créer des choses que d'autres pourraient voir et admirer. Comme j'aime que les gens voient mon travail, je me suis orienté davantage vers le développement frontend. J'ai beaucoup apprécié travailler avec toutes ses langues et technologies."
+    "description": "J'ai toujours été un passionné de technologie, fasciné par le monde étonnant de la technologie. J'aimais ajuster mon ordinateur et mon smartphone, y ajoutant des modifications. Ensuite, j'ai décidé d'entrer dans le monde de la programmation pour créer des choses que d'autres pourraient voir et admirer. Comme j'aime que les gens voient mon travail, je me suis orienté davantage vers le développement frontend. J'ai beaucoup apprécié travailler avec toutes ses langues et technologies."
   },
   "Projects-Section": {
     "title": "Projet sélectionné",
