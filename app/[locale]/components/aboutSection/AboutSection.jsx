@@ -12,7 +12,8 @@ const AboutSection = () => {
 
   return (
     <Reveal>
-      <section
+      <sec
+        tion
         id="about"
         className="text-white flex items-center px-5 lg:px-10"
       >
@@ -40,7 +41,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-      </section>
+      </sec>
     </Reveal>
   )
 }
