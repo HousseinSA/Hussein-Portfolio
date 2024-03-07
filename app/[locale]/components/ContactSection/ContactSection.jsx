@@ -53,7 +53,7 @@ const ContactSection = () => {
             <div>
               <TitleAnimation>
                 <h1
-                  className={`text-4xl font-bold ${
+                  className={`title font-bold ${
                     isArabic ? "md:text-right" : "md:text-left"
                   } text-center text-[#BED250] mb-4`}
                 >

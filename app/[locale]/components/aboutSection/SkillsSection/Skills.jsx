@@ -20,7 +20,7 @@ const SkillsComponent = () => {
         >
           <TitleAnimation>
             <h1
-              className={`text-4xl text-center ${
+              className={`title text-center ${
                 isArabic ? "lg:text-right" : "lg:text-left"
               } font-bold text-[#BED250] mb-4`}
             >

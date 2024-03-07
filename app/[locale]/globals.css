@@ -14,3 +14,7 @@ body {
 .icon {
   color: white;
 }
+
+.title {
+  @apply text-xl  font-semibold lg:text-4xl md:text-2xl md:font-bold;
+}

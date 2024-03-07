@@ -12,7 +12,7 @@ const SkillsComponent = () => {
   const { frontEndSkills, backendSkills, tools } = useTechImages()
   return (
     <Reveal>
-      <section> 
+      <section>
         <div
           className={`mt-4 md:mt-0 px-4 ${
             isArabic ? "text-right" : "text-left"
@@ -20,7 +20,7 @@ const SkillsComponent = () => {
         >
           <TitleAnimation>
             <h1
-              className={`text-4xl text-center ${
+              className={`title text-center ${
                 isArabic ? "lg:text-right" : "lg:text-left"
               } font-bold text-[#BED250] mb-4`}
             >

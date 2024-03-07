@@ -8,8 +8,8 @@ export default function LottieImage() {
   }
   const { View } = useLottie(options)
   return (
-    <div className="w-full max-w-[500px] md:max-w-[700px] h-full mx-auto">
+    <>
       {View}
-    </div>
-  )
+    </>
+  ) 
 }

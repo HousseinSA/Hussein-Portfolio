@@ -33,7 +33,7 @@ export const AppSection = () => {
     <section id="work" className="h-full w-full py-10 sm:px-4 lg:px-10">
       <TitleAnimation>
         <h1
-          className={`text-4xl text-center ${
+          className={`title text-center ${
             isArabic ? "lg:text-right" : "lg:text-left"
           } font-bold text-[#BED250] mb-12`}
         >
