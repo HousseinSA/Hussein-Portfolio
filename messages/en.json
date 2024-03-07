@@ -22,6 +22,7 @@
   },
   "Projects-Section": {
     "title": "Selected Projects",
+    "project0": "Created dynamic football score and stats tracker with Next.js and Tailwind CSS. Utilized APIs for real-time updates on scores and stats",
     "project1": "great app created with react and tailwindCSS for styling and amazing user-interface.",
     "project2": "A React-based ebook store with Tailwind CSS and MongoDB, featuring other amazing tools.",
     "project3": "Document app with real-time editing using React.js, Socket.IO, and MongoDB.",

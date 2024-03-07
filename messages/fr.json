@@ -22,6 +22,7 @@
   },
   "Projects-Section": {
     "title": "Projet sélectionné",
+    "project0": "Créé un suivi dynamique des scores et des statistiques de football avec Next.js et Tailwind CSS. Utilisé des APIs pour des mises à jour en temps réel sur les scores et les statistiques.",
     "project1": "Une excellente application créée avec React et TailwindCSS pour le style et une interface utilisateur incroyable.",
     "project2": "Une librairie de livres électroniques créée avec React et Tailwind CSS, utilisant MongoDB comme base de données ainsi que d'autres outils incroyables.",
     "project3": "Application de documents avec édition en temps réel utilisant React.js, Socket.IO et MongoDB.",

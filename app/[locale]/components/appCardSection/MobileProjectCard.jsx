@@ -2,14 +2,15 @@ import React from "react"
 import Image from "next/image"
 import ProjectLinks from "./ProjectLink"
 import Reveal from "../Layout/RevealAnimation/Reveal"
-const MobileProjectCard = ({ imgUrl, title, descreption, links }) => {
+const MobileProjectCard = ({ projectInfo }) => {
+  const { title, description, image, links } = projectInfo
   return (
     <Reveal>
       <div className="group mb-3 px-4">
         <section className="group w-full  h-full  cursor-pointer">
           <div className="relative w-full h-full">
             <Image
-              src={imgUrl}
+              src={image}
               width={500}
               height={500}
               className="rounded-xl object-cover "
@@ -21,7 +22,7 @@ const MobileProjectCard = ({ imgUrl, title, descreption, links }) => {
                 <h5 className="text-xl font-semibold mb-2 text-[#BED250] ">
                   {title}
                 </h5>
-                <p className="text-[#ADB7BE]">{descreption}</p>
+                <p className="text-[#ADB7BE]">{description}</p>
               </div>
               <ProjectLinks links={links} />
             </div>

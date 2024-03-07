@@ -41,26 +41,13 @@ export const AppSection = () => {
         </h1>
       </TitleAnimation>
       <div className="flex flex-col justify-center items-center gap-5 w-full h-full  ">
-        {projects.map(({ id, title, descreption, Image, links, tags }) =>
+        {projects.map((projectInfo) =>
           isMobile ? (
-            <div className="w-full" key={id}>
-              <MobileProjectCard
-                imgUrl={Image}
-                title={title}
-                descreption={descreption}
-                links={links}
-                key={id}
-              />
+            <div className="w-full" key={projectInfo.id}>
+              <MobileProjectCard projectInfo={projectInfo} />
             </div>
           ) : (
-            <BigScreenProjectCard
-              title={title}
-              key={id}
-              description={descreption}
-              imageUrl={Image}
-              tags={tags}
-              links={links}
-            />
+            <BigScreenProjectCard key={projectInfo.id} projectInfo={projectInfo} />
           )
         )}
       </div>

@@ -4,10 +4,21 @@ export function useProjectContent() {
   const projectsContent = useTranslations("Projects-Section")
   const projects = [
     {
+      id: 0,
+      title: "Stats-Master",
+      description: projectsContent("project0"),
+      image: "/projects/statsMaster.png",
+      links: [
+        "https://stat-master.vercel.app/",
+        "https://github.com/HousseinSA/Stat-master",
+      ],
+      tags: ["Nextjs", "TailwindCSS", "Football API", "Zustand"],
+    },
+    {
       id: 1,
       title: "moviesInfo",
-      descreption: projectsContent("project1"),
-      Image: "/projects/moviesland.png",
+      description: projectsContent("project1"),
+      image: "/projects/moviesland.png",
       links: [
         "https://cina-info.netlify.app/",
         "https://github.com/HousseinSA/LandOfMovies",
@@ -17,8 +28,8 @@ export function useProjectContent() {
     {
       id: 2,
       title: "Ebook-store",
-      descreption: projectsContent("project2"),
-      Image: "/projects/Ebook-store.png",
+      description: projectsContent("project2"),
+      image: "/projects/Ebook-store.png",
       links: [
         "https://ebook-shop.netlify.app/",
         "https://github.com/HousseinSA/Ebook-Shop",
@@ -28,8 +39,8 @@ export function useProjectContent() {
     {
       id: 3,
       title: "Documents-editor",
-      descreption: projectsContent("project3"),
-      Image: "/projects/docs-editor.png",
+      description: projectsContent("project3"),
+      image: "/projects/docs-editor.png",
       links: [
         "https://docs-editor.netlify.app/",
         "https://github.com/HousseinSA/Document-Editor-app",
@@ -39,8 +50,8 @@ export function useProjectContent() {
     {
       id: 4,
       title: "weather-viewer",
-      descreption: projectsContent("project4"),
-      Image: "/projects/weather-viewer.png",
+      description: projectsContent("project4"),
+      image: "/projects/weather-viewer.png",
       links: [
         "https://theweather101.netlify.app/",
         "https://github.com/HousseinSA/Weather-viewer",
@@ -50,8 +61,8 @@ export function useProjectContent() {
     {
       id: 5,
       title: "budget-register",
-      descreption: projectsContent("project5"),
-      Image: "/projects/budget-register.png",
+      description: projectsContent("project5"),
+      image: "/projects/budget-register.png",
       links: [
         "https://budget-register.netlify.app/",
         "https://github.com/HousseinSA/Budget-Register",
@@ -61,8 +72,8 @@ export function useProjectContent() {
     {
       id: 6,
       title: "Go-search-engine",
-      Image: "/projects/go-search-engine.png",
-      descreption: projectsContent("project6"),
+      image: "/projects/go-search-engine.png",
+      description: projectsContent("project6"),
       links: [
         "https://go-search-engine.vercel.app/",
         "https://github.com/HousseinSA/Go-search-engine",

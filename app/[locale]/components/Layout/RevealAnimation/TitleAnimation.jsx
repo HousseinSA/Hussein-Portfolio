@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 
 const TitleAnimation = ({ children }) => {
   const titleVariants = {
-    initial: { opacity: 0, y: 5, scale: 0.5 },
-    animate: { opacity: 1, y: 0, scale: 1 },
+    initial: { opacity: 0, x: 0 },
+    animate: { opacity: 1, x: "-100%" },
   }
   return (
     <motion.div

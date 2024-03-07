@@ -2,13 +2,8 @@ import React from "react"
 import Image from "next/image"
 import ProjectLinks from "./ProjectLink"
 import Reveal from "../Layout/RevealAnimation/Reveal"
-export default function BigScreenProjectCard({
-  title,
-  description,
-  tags,
-  imageUrl,
-  links,
-}) {
+export default function BigScreenProjectCard({ projectInfo }) {
+  const { title, description, tags, image, links } = projectInfo
   return (
     <Reveal>
       <section className="bg-gray-100 max-w-[42rem] cursor-pointer border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 px-2 text-black ">
@@ -27,7 +22,7 @@ export default function BigScreenProjectCard({
           </ul>
         </div>
         <Image
-          src={imageUrl}
+          src={image}
           alt={title}
           quality={95}
           width={400}
