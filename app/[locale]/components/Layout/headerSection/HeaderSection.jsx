@@ -19,7 +19,7 @@ const HeaderSection = () => {
     return () => window.removeEventListener("scroll", checkingScroll)
   }, [])
   const headerBackground =
-    !headerOnScroll === !openNav ? "bg-transparent" : "bg-black/80"
+    headerOnScroll === !openNav  ? "bg-transparent" : "bg-black/80"
   return (
     <section
       className={` ${headerBackground} transition duration-300 z-20 fixed top-0 left-0 right-0`}
