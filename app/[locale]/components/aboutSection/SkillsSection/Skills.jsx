@@ -10,6 +10,7 @@ const SkillsComponent = () => {
   const locale = useLocale()
   const isArabic = locale === "ar"
   const { frontEndSkills, backendSkills, tools } = useTechImages()
+  console.log(tools)
   return (
     <Reveal>
       <section>

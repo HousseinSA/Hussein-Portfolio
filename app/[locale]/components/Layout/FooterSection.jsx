@@ -5,7 +5,7 @@ const FooterSection = () => {
   const footer = useTranslations("Footer-Section")
   return (
     <footer>
-      <div className="text-sm lg:text-base xl:text-md text-[#adb7be]  w-full py-5">
+      <div className="text-sm lg:text-base xl:text-md text-[#adb7be]  w-full py-3 md:py-4">
         <p>
           {footer("footer")} &copy; {Year}
         </p>

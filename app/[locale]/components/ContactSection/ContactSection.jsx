@@ -43,12 +43,8 @@ const ContactSection = () => {
   const contactSection = useTranslations("Contact-Section")
   return (
     <Reveal>
-      <section
-        className="
-     "
-        id="contact"
-      >
-        <div className="grid grid-cols-1 h-full md:h-[60%] lg:grid-cols-2 w-full place-items-center justify-center lg:gap-8 xl:gap-16 my-5">
+      <section className="md:mt-10 mt-3 w-full h-full" id="contact">
+        <div className="grid grid-cols-1 h-full lg:grid-cols-2 w-full place-items-center justify-center ">
           <div className="flex flex-col justify-between gap-3">
             <div>
               <TitleAnimation>
@@ -124,7 +120,7 @@ const ContactSection = () => {
                 <textarea
                   value={message}
                   onChange={({ target }) => setMessage(target.value)}
-                  className="rounded-md border-none focus:outline-none  mt-3 py-2 pl-3 w-full bg-[#121212] text-[#BED250]"
+                  className="rounded-md border-none focus:outline-none  py-2 pl-3 w-full bg-[#121212] text-[#BED250]"
                   name="message"
                   cols="30"
                   rows="10"
@@ -156,6 +152,7 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
+
         {/* have to fix notification bug  */}
         <ToastContainer />
       </section>

@@ -179,7 +179,7 @@ export function useTechImages() {
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
-      language: "Figma",
+      language: "",
       imgLink:
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     },

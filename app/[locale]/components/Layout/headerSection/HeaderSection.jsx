@@ -19,7 +19,7 @@ const HeaderSection = () => {
     return () => window.removeEventListener("scroll", checkingScroll)
   }, [])
   const headerBackground =
-    headerOnScroll === !openNav  ? "bg-transparent" : "bg-black/80"
+    headerOnScroll === !openNav  ? "bg-black/20" : "bg-black/80"
   return (
     <section
       className={` ${headerBackground} transition duration-300 z-20 fixed top-0 left-0 right-0`}
@@ -46,7 +46,7 @@ const HeaderSection = () => {
           {openNav ? (
             <button
               onClick={() => setOpenNav(false)}
-              className="text-slate-200 flex items-center py-2 px-3 border border-slate-200 rounded hover:text-white hover:border-[#BED250]"
+              className="text-slate-200  flex items-center py-2 px-3 border border-slate-200 rounded hover:text-white hover:border-[#BED250]"
             >
               <IoMdClose className="w-5 h-5" />
             </button>

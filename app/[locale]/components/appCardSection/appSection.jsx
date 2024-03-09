@@ -30,7 +30,10 @@ export const AppSection = () => {
   const isArabic = locale === "ar"
 
   return (
-    <section id="work" className="h-full w-full py-10 sm:px-4 lg:px-10">
+    <section
+      id="work"
+      className="h-full md:mt-10 mt-3 w-full py-4 px-2 md:py-10 md:px-4 lg:px-10"
+    >
       <TitleAnimation>
         <h1
           className={`title text-center ${
@@ -47,7 +50,10 @@ export const AppSection = () => {
               <MobileProjectCard projectInfo={projectInfo} />
             </div>
           ) : (
-            <BigScreenProjectCard key={projectInfo.id} projectInfo={projectInfo} />
+            <BigScreenProjectCard
+              key={projectInfo.id}
+              projectInfo={projectInfo}
+            />
           )
         )}
       </div>
