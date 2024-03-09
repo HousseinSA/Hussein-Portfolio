@@ -168,21 +168,21 @@ export function useTechImages() {
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     },
   ]
-  const tools = [
-    {
-      language: "Github",
-      imgLink: undefined,
-    },
-    {
-      language: "Git",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    },
-    {
-      language: "",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    },
-  ]
+   const tools = [
+     {
+       language: "Github",
+       imgLink: undefined,
+     },
+     {
+       language: "Git",
+       imgLink:
+         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+     },
+     {
+       language: "Figma",
+       imgLink:
+         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+     },
+   ]
   return { frontEndSkills, backendSkills, tools }
 }

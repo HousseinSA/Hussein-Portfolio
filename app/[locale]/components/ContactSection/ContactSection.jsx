@@ -43,7 +43,7 @@ const ContactSection = () => {
   const contactSection = useTranslations("Contact-Section")
   return (
     <Reveal>
-      <section className="md:mt-10 mt-3 w-full h-full" id="contact">
+      <section className="section" id="contact">
         <div className="grid grid-cols-1 h-full lg:grid-cols-2 w-full place-items-center justify-center ">
           <div className="flex flex-col justify-between gap-3">
             <div>

@@ -15,7 +15,7 @@ const SkillsComponent = () => {
     <Reveal>
       <section>
         <div
-          className={`mt-4 md:mt-0 px-4 ${
+          className={`${
             isArabic ? "text-right" : "text-left"
           } flex flex-col justify-center`}
         >
@@ -31,9 +31,9 @@ const SkillsComponent = () => {
           <div
             id="skills"
             style={{ transform: "scale(0.9)" }}
-            className="flex relative flex-col justify-center items-center gap-3 h-full overflow-hidden"
+            className="flex relative flex-col justify-center items-center gap-5 h-full overflow-hidden"
           >
-            <div className="flex justify-around gap-5 mt-4 flex-wrap items-center">
+            <div className="flex justify-around gap-5 flex-wrap items-center">
               {frontEndSkills?.map(({ language, imgLink }, index) => {
                 return (
                   <SkillImage
@@ -45,7 +45,7 @@ const SkillsComponent = () => {
                 )
               })}
             </div>
-            <div className="flex justify-around gap-5 mt-4 flex-wrap items-center">
+            <div className="flex justify-around gap-5 flex-wrap items-center">
               {backendSkills?.map(({ language, imgLink }, index) => {
                 return (
                   <SkillImage
@@ -57,7 +57,7 @@ const SkillsComponent = () => {
                 )
               })}
             </div>
-            <div className="flex justify-around gap-5 mt-4 flex-wrap items-center">
+            <div className="flex justify-around gap-5 flex-wrap items-center">
               {tools?.map(({ language, imgLink }, index) => {
                 return (
                   <SkillImage

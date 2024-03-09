@@ -12,13 +12,10 @@ const AboutSection = () => {
 
   return (
     <Reveal>
-      <section
-        id="about"
-        className="text-white flex items-center px-5 lg:px-10"
-      >
-        <div className="flex flex-col w-full h-full gap-4">
+      <section id="about" className="section">
+        <div className="flex flex-col w-full h-full  items-center justify-center">
           <SkillsComponent />
-          <div className="flex flex-col w-full h-full lg:flex-row justify-center gap-3 md:gap-16 items-center">
+          <div className="flex flex-col  lg:flex-row justify-center gap-3 md:gap-16 items-center">
             <div className=" w-full sm:w-1/2 lg:w-1/3">
               <LottieImage />
             </div>
@@ -33,7 +30,7 @@ const AboutSection = () => {
                 </h1>
               </TitleAnimation>
               <p
-                className={`text-base ${
+                className={`text-base text-white ${
                   isArabic ? "text-right" : "text-left"
                 } lg:text-lg mb-4`}
               >

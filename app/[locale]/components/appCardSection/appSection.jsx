@@ -32,7 +32,7 @@ export const AppSection = () => {
   return (
     <section
       id="work"
-      className="h-full md:mt-10 mt-3 w-full py-4 px-2 md:py-10 md:px-4 lg:px-10"
+      className="section"
     >
       <TitleAnimation>
         <h1
