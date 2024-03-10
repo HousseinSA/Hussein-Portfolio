@@ -13,7 +13,7 @@ const HeroSection = () => {
   const resumeLink =
     locale === "fr" || locale === "ar"
       ? "https://drive.google.com/file/d/1z4zBoxw02HGP3qymwblZNW-VF8_3gh1z/view?usp=drive_link"
-      : "https://drive.google.com/file/d/1F9H-FzsfvLEG2S4jkcvrZnnE3gcX2sw-/view?usp=drive_link"
+      : "https://drive.google.com/file/d/1mIvl2ufneFoOY6nsB3MjDHXvBvypnQfE/view?usp=drive_link"
 
   const handleMail = () => {
     window.location.href = "mailto:nejihoussein1@gmail.com"
