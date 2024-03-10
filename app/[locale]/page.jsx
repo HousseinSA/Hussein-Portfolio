@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <main>
       <HeaderSection />
-      <div className="mx-auto mt-0 sm:mt-10 px-5 md:px-12">
+      <div className="mx-auto mt-14 sm:mt-5 px-5 md:px-12">
         <HeroSection />
         <AboutSection />
         <AppSection />

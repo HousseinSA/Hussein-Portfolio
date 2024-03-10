@@ -24,7 +24,7 @@ export default function LocaleLayout({ children }) {
         />
       </Head>
       <body
-        className={`${inter.className} relative bg-[#121212] overflow-y-scroll overflow-x-hidden`}
+        className={`${inter.className} relative  bg-[#121212] overflow-y-scroll overflow-x-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
