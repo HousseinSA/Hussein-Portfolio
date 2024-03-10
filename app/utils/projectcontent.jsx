@@ -88,101 +88,85 @@ export function useProjectContent() {
 export function useTechImages() {
   const frontEndSkills = [
     {
-      language: "javascript",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      tool: "javascript",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     },
     {
-      language: "Typescript",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      tool: "Typescript",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     },
     {
-      language: "HTML",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      tool: "HTML",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     },
     {
-      language: "CSS",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      tool: "CSS",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     },
     {
-      language: "REACT",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      tool: "REACT",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     },
     {
-      language: "Redux",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+      tool: "Redux",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
     },
     {
-      language: "Nextjs",
-      imgLink: undefined,
+      tool: "Nextjs",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
     },
     {
-      language: "PHP",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+      tool: "PHP",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     },
     {
-      language: "Tailwind",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      tool: "Tailwind",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     },
     {
-      language: "Bootstrap",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      tool: "Bootstrap",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     },
     {
-      language: "materialui",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+      tool: "materialui",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
     },
   ]
   const backendSkills = [
     {
-      language: "NodeJS",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      tool: "NodeJS",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     },
     {
-      language: "MongoDB",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      tool: "MongoDB",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     },
     {
-      language: "Firebase",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg",
+      tool: "Firebase",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg",
     },
     {
-      language: "express",
-      imgLink: undefined,
+      tool: "express",
+      img: undefined,
     },
     {
-      language: "mysql",
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+      tool: "mysql",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     },
   ]
-   const tools = [
-     {
-       language: "Github",
-       imgLink: undefined,
-     },
-     {
-       language: "Git",
-       imgLink:
-         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-     },
-     {
-       language: "Figma",
-       imgLink:
-         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-     },
-   ]
+  const tools = [
+    {
+      tool: "Github",
+      img: undefined,
+    },
+    {
+      tool: "Git",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    },
+    {
+      tool: "Figma",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    },
+  ]
   return { frontEndSkills, backendSkills, tools }
 }

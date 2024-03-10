@@ -10,6 +10,7 @@ const SkillsComponent = () => {
   const locale = useLocale()
   const isArabic = locale === "ar"
   const { frontEndSkills, backendSkills, tools } = useTechImages()
+console.log(tools)
   return (
     <Reveal>
       <section>
@@ -33,38 +34,23 @@ const SkillsComponent = () => {
             className="flex relative flex-col justify-center items-center gap-5 h-full overflow-hidden"
           >
             <div className="flex justify-around gap-5 flex-wrap items-center">
-              {frontEndSkills?.map(({ language, imgLink }, index) => {
+              {frontEndSkills?.map(({ tool, img }, index) => {
                 return (
-                  <SkillImage
-                    key={index}
-                    index={index}
-                    imgLink={imgLink}
-                    title={language}
-                  />
+                  <SkillImage key={index} index={index} img={img} tool={tool} />
                 )
               })}
             </div>
             <div className="flex justify-around gap-5 flex-wrap items-center">
-              {backendSkills?.map(({ language, imgLink }, index) => {
+              {backendSkills?.map(({ tool, img }, index) => {
                 return (
-                  <SkillImage
-                    key={index}
-                    index={index}
-                    imgLink={imgLink}
-                    title={language}
-                  />
+                  <SkillImage key={index} index={index} img={img} tool={tool} />
                 )
               })}
             </div>
             <div className="flex justify-around gap-5 flex-wrap items-center">
-              {tools?.map(({ language, imgLink }, index) => {
+              {tools?.map(({ tool, img }, index) => {
                 return (
-                  <SkillImage
-                    key={index}
-                    index={index}
-                    imgLink={imgLink}
-                    title={language}
-                  />
+                  <SkillImage key={index} index={index} img={img} tool={tool} />
                 )
               })}
             </div>

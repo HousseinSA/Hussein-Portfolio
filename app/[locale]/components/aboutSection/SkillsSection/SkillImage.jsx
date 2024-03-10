@@ -1,41 +1,34 @@
 "use client"
+
 import { motion } from "framer-motion"
-import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb"
-import { FaGithub } from "react-icons/fa"
+import { GrGithub } from "react-icons/gr"
 import { SiExpress } from "react-icons/si"
 import Image from "next/image"
-const SkillImage = ({ index, imgLink, title }) => {
+
+const SkillImage = ({ index, img, tool }) => {
   const ImageVariants = {
     hidden: { opacity: 0, y: 100 },
     visible: { opacity: 1, y: 0 },
   }
+
+  let toolIcon
+  if (tool === "Github") {
+    toolIcon = <GrGithub size={70} color="white" />
+  } else if (tool === "express") {
+    toolIcon = <SiExpress size={70} color="white" />
+  } else {
+    toolIcon = <Image src={img && img} alt={tool} width={70} height={70} />
+  }
+
   return (
     <motion.div
       variants={ImageVariants}
       initial="hidden"
-      whileInView={"visible"}
+      animate="visible"
       transition={{ delay: index * 0.3 }}
-      viewport={{
-        once: true,
-      }}
+      className="text-white"
     >
-      {title === "Nextjs" ? (
-        <TbBrandNextjs size={70} color="white" />
-      ) : title === "Github" ? (
-        <FaGithub size={70} color="white" />
-      ) : title === "express" ? (
-        <SiExpress size={70} color="white" />
-      ) : title === "Tailwind" ? (
-        <TbBrandTailwind size={70} color="teal" />
-      ) : (
-        <Image
-          src={imgLink && imgLink}
-          alt={title}
-          width={70}
-          height={70}
-          className={`${title === "Nextjs" && "icon"}`}
-        />
-      )}
+      {toolIcon}
     </motion.div>
   )
 }

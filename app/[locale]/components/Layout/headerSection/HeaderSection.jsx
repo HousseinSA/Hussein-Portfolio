@@ -1,25 +1,29 @@
-"use client"
-import Link from "next/link"
+'use client'
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import { FaBars } from "react-icons/fa6"
 import { IoMdClose } from "react-icons/io"
+
 import NavMenu from "./Nav/NavMenu"
 import MobileNav from "./MobileNav"
+
 const HeaderSection = () => {
   const [openNav, setOpenNav] = useState(false)
   const [headerOnScroll, setHeaderOnScroll] = useState(false)
 
   useEffect(() => {
     const checkingScroll = () => {
-      const shouldSetHeaderOnScroll = window.scrollY >= 100 && !openNav
+      const shouldSetHeaderOnScroll = window.scrollY >= 100
       setHeaderOnScroll(shouldSetHeaderOnScroll)
     }
     window.addEventListener("scroll", checkingScroll)
     return () => window.removeEventListener("scroll", checkingScroll)
-  }, [])
+  }, [openNav])
+
   const headerBackground =
-    headerOnScroll === !openNav ? "bg-black/20" : "bg-black/80"
+    headerOnScroll && !openNav ? "bg-black/20" : "bg-black/80"
+
   return (
     <section
       className={` ${headerBackground} transition duration-300 z-20 fixed top-0 left-0 right-0`}
@@ -27,7 +31,7 @@ const HeaderSection = () => {
       <header
         className={`px-5 md:px-8 py-2 flex justify-between flex-wrap items-center`}
       >
-        <Link href={"/"} className="text-5xl  font-semibold">
+        <Link href={"/"} className="text-5xl font-semibold">
           <Image
             src={"/logo.png"}
             priority
@@ -37,8 +41,7 @@ const HeaderSection = () => {
                           (min-width: 1040px) calc(25.68vw - 38px),
                           (min-width: 780px) calc(31.25vw - 79px),
                           (min-width: 520px) 342px,
-                          calc(97vw - 143px)
-                        "
+                          calc(97vw - 143px)"
             alt="website logo"
           />
         </Link>
@@ -46,7 +49,7 @@ const HeaderSection = () => {
           {openNav ? (
             <button
               onClick={() => setOpenNav(false)}
-              className="text-slate-200  flex items-center py-2 px-3 border border-slate-200 rounded hover:text-white hover:border-[#BED250]"
+              className="text-slate-200 flex items-center py-2 px-3 border border-slate-200 rounded hover:text-white hover:border-[#BED250]"
             >
               <IoMdClose className="w-5 h-5" />
             </button>

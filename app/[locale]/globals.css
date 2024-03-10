@@ -14,14 +14,11 @@ body {
 .direction {
   direction: rtl;
 }
-.icon {
-  color: white;
-}
 
 .title {
   @apply text-xl  font-semibold lg:text-4xl md:text-2xl md:font-bold;
 }
 
 .section {
-  @apply md:mt-10 mt-3 w-full h-full
+  @apply md:mt-10 mt-3 w-full h-full;
 }
