@@ -12,14 +12,14 @@ const HeaderSection = () => {
 
   useEffect(() => {
     const checkingScroll = () => {
-      const shouldSetHeaderOnScroll = window.scrollY >= 100
+      const shouldSetHeaderOnScroll = window.scrollY >= 100 && !openNav
       setHeaderOnScroll(shouldSetHeaderOnScroll)
     }
     window.addEventListener("scroll", checkingScroll)
     return () => window.removeEventListener("scroll", checkingScroll)
   }, [])
   const headerBackground =
-    headerOnScroll === !openNav  ? "bg-black/20" : "bg-black/80"
+    headerOnScroll === !openNav ? "bg-black/20" : "bg-black/80"
   return (
     <section
       className={` ${headerBackground} transition duration-300 z-20 fixed top-0 left-0 right-0`}
