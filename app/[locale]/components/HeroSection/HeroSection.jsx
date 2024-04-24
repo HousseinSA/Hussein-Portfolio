@@ -12,8 +12,8 @@ const HeroSection = () => {
   const isArabic = locale === "ar"
   const resumeLink =
     locale === "fr" || locale === "ar"
-      ? "https://drive.google.com/file/d/1z4zBoxw02HGP3qymwblZNW-VF8_3gh1z/view?usp=drive_link"
-      : "https://drive.google.com/file/d/1UkoyPYSLtd7PJOCiDNC1qhnx7tqxt89G/view?usp=sharing"
+      ? "https://drive.google.com/file/d/16EwK0bmI7ZDP7VUxwctwKXRbSJXVTdJ6/view?usp=drive_links"
+      :  "https://drive.google.com/file/d/18KI2Sc-zLPrWfxnLevD2ieuMICsPSRpX/view?usp=drive_link"
 
   const handleMail = () => {
     window.location.href = "mailto:nejihoussein1@gmail.com"
