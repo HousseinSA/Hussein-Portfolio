@@ -29,7 +29,8 @@
     "project4": "Weather app with real-time updates, built using React and Tailwind CSS",
     "project5": "an budget manager created with react for frontend and tailwindCSS for styling.",
     "project6": "Google-like search engine built with Next.js frontend, API routes for backend, and Tailwind CSS for UI.",
-    "project7": "ShopNest is a modern e-commerce platform built with Next.js and MongoDB, offering secure payments via Stripe and smooth user authentication with NextAuth."
+    "project7": "ShopNest is a modern e-commerce platform built with Next.js and MongoDB, offering secure payments via Stripe and smooth user authentication with NextAuth.",
+    "project8": "This demo version of a live application allows a client to manage registrations, transactions, services, and reservations, generating PDF invoices. User authentication is omitted for the demo."
   },
   "Contact-Section": {
     "title": "Let's Connect",

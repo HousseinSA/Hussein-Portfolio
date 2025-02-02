@@ -14,8 +14,20 @@ export function useProjectContent() {
       ],
       tags: ["Nextjs", "TailwindCSS", "Mongodb", "next-auth", 'zustand', 'others'],
     },
+
     {
       id: 1,
+      title: "Safaris Center",
+      description: projectsContent("project8"),
+      image: "/projects/safaris-center-demo.png",
+      links: [
+        "https://safaris-center-demo.vercel.app/",
+        "https://github.com/HousseinSA/safaris-center",
+      ],
+      tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
+    },
+    {
+      id: 2,
       title: "Stats-Master",
       description: projectsContent("project0"),
       image: "/projects/statsMaster.png",
@@ -26,7 +38,7 @@ export function useProjectContent() {
       tags: ["Nextjs", "TailwindCSS", "Football API", "Zustand"],
     },
     {
-      id: 2,
+      id: 3,
       title: "moviesInfo",
       description: projectsContent("project1"),
       image: "/projects/moviesland.png",
@@ -37,7 +49,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "IDM API"],
     },
     {
-      id: 3,
+      id: 4,
       title: "Ebook-store",
       description: projectsContent("project2"),
       image: "/projects/Ebook-store.png",
@@ -48,7 +60,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "Redux", "0auth", "Mongodb"],
     },
     {
-      id: 4,
+      id: 5,
       title: "Documents-editor",
       description: projectsContent("project3"),
       image: "/projects/docs-editor.png",
@@ -59,7 +71,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "Socket.io", "nodeJs"],
     },
     {
-      id: 5,
+      id: 6,
       title: "weather-viewer",
       description: projectsContent("project4"),
       image: "/projects/weather-viewer.png",
@@ -70,7 +82,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "WeatherAPI"],
     },
     {
-      id: 6,
+      id: 7,
       title: "budget-register",
       description: projectsContent("project5"),
       image: "/projects/budget-register.png",
@@ -81,7 +93,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "bootstrap", "Redux"],
     },
     {
-      id: 7,
+      id: 8,
       title: "Go-search-engine",
       image: "/projects/go-search-engine.png",
       description: projectsContent("project6"),
