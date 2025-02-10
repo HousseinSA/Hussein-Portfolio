@@ -25,20 +25,18 @@ const MobileProjectCard = ({ projectInfo }) => {
                 </h5>
               </div>
 
-              {/* Project Links */}
               <ProjectLinks links={links} />
 
-              {/* Tags (Tech Stack) */}
-              <ul className="flex flex-wrap gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+              {/* <ul className="flex flex-wrap gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                 {tags.map((tag, index) => (
                   <li
-                    className="bg-[#BED250] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-black rounded-full"
+                    className="bg-[#BED250] px-2 py-1 text-[0.3rem] uppercase tracking-wider text-black rounded-full"
                     key={index}
                   >
                     {tag}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
         </section>
