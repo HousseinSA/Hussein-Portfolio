@@ -9,8 +9,8 @@ export function useProjectContent() {
       description: projectsContent("project9"),
       image: "/projects/toyota-ecu-services.png",
       links: [
-        "https://safaris-center-demo.vercel.app/",
-        "https://github.com/HousseinSA/safaris-center",
+        "https://toyota-ecu-services.com/login",
+        "https://github.com/HousseinSA/auto-mobile",
       ],
       tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
     },
