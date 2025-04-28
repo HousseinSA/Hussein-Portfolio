@@ -3,7 +3,7 @@ import Image from "next/image"
 import ProjectLinks from "./ProjectLink"
 import Reveal from "../Layout/RevealAnimation/Reveal"
 export default function BigScreenProjectCard({ projectInfo }) {
-  const { title, description, tags, image, links } = projectInfo;
+  const { title, description, tags, image, links } = projectInfo
   return (
     <Reveal>
       <section className="bg-gray-100 max-w-[42rem] cursor-pointer border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 px-2 text-black">
@@ -29,7 +29,7 @@ export default function BigScreenProjectCard({ projectInfo }) {
             <ul className="flex flex-wrap gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
               {tags.map((tag, index) => (
                 <li
-                  className="bg-[#BED250] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-black rounded-full"
+                  className="bg-[#BED250] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
                   key={index}
                 >
                   {tag}
@@ -40,5 +40,5 @@ export default function BigScreenProjectCard({ projectInfo }) {
         </div>
       </section>
     </Reveal>
-  );
+  )
 }

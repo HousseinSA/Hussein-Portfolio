@@ -5,16 +5,15 @@ export function useProjectContent() {
   const projects = [
     {
       id: 0,
-      title: "ShopNest-e-commerce",
-      description: projectsContent("project7"),
-      image: "/projects/ShopNest-e-commerce.png",
+      title: "Toyota-ecu-services",
+      description: projectsContent("project9"),
+      image: "/projects/toyota-ecu-services.png",
       links: [
-        "https://shopnest-frontend.vercel.app/",
-        "https://github.com/HousseinSA/ShopNest",
+        "https://safaris-center-demo.vercel.app/",
+        "https://github.com/HousseinSA/safaris-center",
       ],
-      tags: ["Nextjs", "TailwindCSS", "Mongodb", "next-auth", 'zustand', 'others'],
+      tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
     },
-
     {
       id: 1,
       title: "Safaris Center",
@@ -28,6 +27,24 @@ export function useProjectContent() {
     },
     {
       id: 2,
+      title: "ShopNest-e-commerce",
+      description: projectsContent("project7"),
+      image: "/projects/ShopNest-e-commerce.png",
+      links: [
+        "https://shopnest-frontend.vercel.app/",
+        "https://github.com/HousseinSA/ShopNest",
+      ],
+      tags: [
+        "Nextjs",
+        "TailwindCSS",
+        "Mongodb",
+        "next-auth",
+        "zustand",
+        "others",
+      ],
+    },
+    {
+      id: 3,
       title: "Stats-Master",
       description: projectsContent("project0"),
       image: "/projects/statsMaster.png",
@@ -38,7 +55,7 @@ export function useProjectContent() {
       tags: ["Nextjs", "TailwindCSS", "Football API", "Zustand"],
     },
     {
-      id: 3,
+      id: 4,
       title: "moviesInfo",
       description: projectsContent("project1"),
       image: "/projects/moviesland.png",
@@ -49,7 +66,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "IDM API"],
     },
     {
-      id: 4,
+      id: 5,
       title: "Ebook-store",
       description: projectsContent("project2"),
       image: "/projects/Ebook-store.png",
@@ -60,7 +77,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "Redux", "0auth", "Mongodb"],
     },
     {
-      id: 5,
+      id: 6,
       title: "Documents-editor",
       description: projectsContent("project3"),
       image: "/projects/docs-editor.png",
@@ -71,7 +88,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "Socket.io", "nodeJs"],
     },
     {
-      id: 6,
+      id: 7,
       title: "weather-viewer",
       description: projectsContent("project4"),
       image: "/projects/weather-viewer.png",
@@ -82,7 +99,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "TailwindCSS", "WeatherAPI"],
     },
     {
-      id: 7,
+      id: 8,
       title: "budget-register",
       description: projectsContent("project5"),
       image: "/projects/budget-register.png",
@@ -93,7 +110,7 @@ export function useProjectContent() {
       tags: ["ReactJS", "bootstrap", "Redux"],
     },
     {
-      id: 8,
+      id: 9,
       title: "Go-search-engine",
       image: "/projects/go-search-engine.png",
       description: projectsContent("project6"),
@@ -142,6 +159,12 @@ export function useTechImages() {
       tool: "PHP",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     },
+
+    {
+      tool: "Dart",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+    },
+
     {
       tool: "Tailwind",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
@@ -153,6 +176,14 @@ export function useTechImages() {
     {
       tool: "materialui",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+    },
+    {
+      tool: "Python",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg",
+    },
+    {
+      tool: "flutter",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
     },
   ]
   const backendSkills = [

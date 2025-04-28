@@ -30,7 +30,8 @@
     "project5": "Gestionnaire de budget construit avec React pour le frontend et stylisé avec Tailwind CSS.",
     "project6": "Moteur de recherche similaire à Google construit avec Next.js pour le frontend, des routes API pour le backend, et Tailwind CSS pour l'interface utilisateur.",
     "project7": "ShopNest est une plateforme e-commerce moderne utilisant Next.js et MongoDB, offrant des paiements sécurisés via Stripe et une authentification fluide avec NextAuth.",
-    "project8": "Il s'agit d'un projet réel utilisé quotidiennement par le client. Il permet de gérer les inscriptions, les transactions, les services et les réservations, ainsi que de générer des factures au format PDF. L'authentification des utilisateurs a été retirée dans cette version de démonstration à des fins de présentation. "
+    "project8": "Il s'agit d'un projet réel utilisé quotidiennement par le client. Il permet de gérer les inscriptions, les transactions, les services et les réservations, ainsi que de générer des factures au format PDF. L'authentification des utilisateurs a été retirée dans cette version de démonstration à des fins de présentation.",
+    "project9": "Un tableau de bord admin permettant aux utilisateurs de créer des descriptions de services, de télécharger des preuves de paiement et de gérer leurs services. Les administrateurs peuvent consulter toutes les soumissions et renvoyer des fichiers modifiés aux utilisateurs."
   },
   "Contact-Section": {
     "title": "Restons Connectés",
