@@ -2,23 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500&family=Cairo:wght@300;400;500;600;700&display=swap");
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1a1f35 25%,
+    #1f1a38 50%,
+    #1a2a3a 75%,
+    #0f172a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  min-height: 100vh;
 }
+
+body[dir="rtl"] {
+  font-family: "Cairo", sans-serif !important;
+}
+
 .direction {
   direction: rtl;
 }
 
 .title {
-  @apply text-xl  font-semibold lg:text-4xl md:text-2xl md:font-bold;
+  @apply text-xl font-semibold lg:text-4xl md:text-2xl md:font-bold;
 }
 
 .section {
-  @apply md:mt-10 mt-3 w-full h-full;
+  @apply w-full h-full py-8 sm:py-12 md:py-24 relative;
 }

@@ -15,28 +15,17 @@ const ParticleComponent = () => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          fpsLimit: 1000,
+          fpsLimit: 60,
           fullScreen: { enable: false },
           interactivity: {
             events: {
               onClick: {
-                enable: true,
-                // mode: "push",
+                enable: false,
               },
               onHover: {
-                enable: true,
-                mode: "repulse",
+                enable: false,
               },
               resize: true,
-            },
-            modes: {
-              push: {
-                // quantity: 5,
-              },
-              repulse: {
-                distance: 150,
-                duration: 0.4,
-              },
             },
           },
           particles: {
@@ -47,8 +36,8 @@ const ParticleComponent = () => {
               color: "#606874",
               distance: 150,
               enable: true,
-              opacity: 0.5,
-              width: 1,
+              opacity: 0.3,
+              width: 0.8,
             },
             move: {
               direction: "none",
@@ -57,24 +46,24 @@ const ParticleComponent = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 5,
+              speed: 2,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 1500,
+                area: 2500,
               },
-              value: 100,
+              value: 50,
             },
             opacity: {
-              value: 0.3,
+              value: 0.2,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 4 },
+              value: { min: 1, max: 3 },
             },
           },
           detectRetina: true,

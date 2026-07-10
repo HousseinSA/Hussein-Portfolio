@@ -9,7 +9,7 @@
     "name": "Hussein,",
     "work": "Développeur Frontend",
     "work2": "Développeur Full Stack.",
-    "aboutme": "Passionné de technologie qui aime créer des applications web attrayantes.",
+    "aboutme": "Je conçois des applications web rapides, interactives et intuitives.",
     "download": "Télécharger / Voir le CV",
     "hire": "Joindre"
   },
@@ -18,20 +18,18 @@
   },
   "About-Section": {
     "title": "À propos",
-    "description": "J'ai toujours été un passionné de technologie, fasciné par le monde étonnant de la technologie. J'aimais ajuster mon ordinateur et mon smartphone, y ajoutant des modifications. Ensuite, j'ai décidé d'entrer dans le monde de la programmation pour créer des choses que d'autres pourraient voir et admirer. Comme j'aime que les gens voient mon travail, je me suis orienté davantage vers le développement frontend. J'ai beaucoup apprécié travailler avec toutes ses langues et technologies."
+    "description": "Je suis développeur logiciel avec plus de 3 ans d'expérience dans la création d'applications web haute performance en utilisant **React**, **Next.js** et **TypeScript**. Ce qui me pousse, c'est de résoudre des problèmes complexes et de créer des expériences utilisateur seamless qui comptent vraiment. J'adore optimiser les performances — il y a quelque chose de satisfaisant à réduire les temps de chargement. Je travaille sur l'ensemble de la pile, mais ma vraie passion est le développement frontend où je peux écrire du code évolutif et maintenable avec des interfaces magnifiques. Quand je ne code pas, j'explore toujours de nouveaux outils et frameworks pour élargir mes compétences.",
+    "experience": "Années d'expérience",
+    "projects": "Projets réalisés",
+    "clients": "Clients satisfaits"
   },
   "Projects-Section": {
-    "title": "Projet sélectionné",
-    "project0": "Créé un suivi dynamique des scores et des statistiques de football avec Next.js et Tailwind CSS. Utilisé des APIs pour des mises à jour en temps réel sur les scores et les statistiques.",
-    "project1": "Une excellente application créée avec React et TailwindCSS pour le style et une interface utilisateur incroyable.",
-    "project2": "Une librairie de livres électroniques créée avec React et Tailwind CSS, utilisant MongoDB comme base de données ainsi que d'autres outils incroyables.",
-    "project3": "Application de documents avec édition en temps réel utilisant React.js, Socket.IO et MongoDB.",
-    "project4": "Application météo avec mises à jour en temps réel, construite avec React et Tailwind CSS.",
-    "project5": "Gestionnaire de budget construit avec React pour le frontend et stylisé avec Tailwind CSS.",
-    "project6": "Moteur de recherche similaire à Google construit avec Next.js pour le frontend, des routes API pour le backend, et Tailwind CSS pour l'interface utilisateur.",
-    "project7": "ShopNest est une plateforme e-commerce moderne utilisant Next.js et MongoDB, offrant des paiements sécurisés via Stripe et une authentification fluide avec NextAuth.",
-    "project8": "Il s'agit d'un projet réel utilisé quotidiennement par le client. Il permet de gérer les inscriptions, les transactions, les services et les réservations, ainsi que de générer des factures au format PDF. L'authentification des utilisateurs a été retirée dans cette version de démonstration à des fins de présentation.",
-    "project9": "Cette démo présente un projet réel pour des services de tuning. Elle comprend un tableau de bord pour gérer les services et télécharger des preuves de paiement. Pour la version réelle, visitez: http://toyota-ecu-services.com"
+    "title": "Projets sélectionnés",
+    "Krily-Engine": "Place de marché dédiée aux équipements de construction permettant aux utilisateurs de louer, acheter et vendre du matériel grâce à des tableaux de bord distincts pour les administrateurs, fournisseurs et locataires, avec gestion des réservations, des paiements et des validations.",
+    "Krily-Car": "Plateforme de location de voitures comprenant une application mobile destinée aux clients ainsi qu'un tableau de bord d'administration web permettant de gérer la vérification des utilisateurs, l'approbation des comptes, les employés, les réservations, la disponibilité des véhicules et l'ensemble des opérations de location.",
+    "Egtaely": "Plateforme de gestion du transport comprenant une application mobile et un tableau de bord d'administration web centralisé pour gérer les bus, les trajets, les chauffeurs, le personnel, les paiements, la planification et les opérations quotidiennes.",
+    "Toyota-ecu-services": "Plateforme de reprogrammation ECU permettant aux clients de téléverser les fichiers ECU de leurs véhicules, de demander des modifications personnalisées, de suivre leurs commandes, de gérer les paiements et de recevoir en toute sécurité les fichiers modifiés.",
+    "Safaris Center": "Plateforme de gestion des opérations de safari permettant de gérer les réservations des clients, les services sélectionnés, les paiements, les factures, la planification des voyages, les dépenses, les rapports de rentabilité et les analyses commerciales."
   },
   "Contact-Section": {
     "title": "Restons Connectés",
@@ -44,5 +42,9 @@
   },
   "Footer-Section": {
     "footer": "Portfolio Hussein, tous droits réservés."
+  },
+  "Projects-Links": {
+    "privateRepo": "Dépôt Privé - Projet d'Entreprise",
+    "viewLive": "Voir le Site en Direct"
   }
 }

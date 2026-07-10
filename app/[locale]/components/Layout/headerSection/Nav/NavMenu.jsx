@@ -14,7 +14,7 @@ const NavMenu = () => {
   const hashvisibleSectionId = "#" + visibleSectionId
 
   return (
-    <ul className="hidden text-white font-semibold md:flex p-4 md:p-0 md:space-x-8 items-center">
+    <ul className="hidden text-white font-semibold md:flex p-4 md:p-0 md:space-x-8 rtl:space-x-reverse items-center">
       {navLinks?.map(({ href, linkname }, index) => {
         return (
           <NavLink

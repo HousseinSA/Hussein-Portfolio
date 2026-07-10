@@ -1,19 +1,18 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { useLocale, useTranslations } from "next-intl"
-import ParticleComponent from "./particles/particlesComponent"
 import Reveal from "../Layout/RevealAnimation/Reveal"
+import AnimatedBackground from "./AnimatedBackground"
 
 const HeroSection = () => {
   const hero = useTranslations("Hero-Section")
   const locale = useLocale()
   const isArabic = locale === "ar"
   const resumeLink =
-    locale === "fr" || locale === "ar"
-      ? "https://drive.google.com/file/d/1K0x1MwS0WenyQ49bt3hannClpYJ_byxR/view?usp=sharing"
-      : " https://drive.google.com/file/d/1XktEcvygaIpQ7Y85UnHn_kCDYxHkk0-l/view?usp=sharing"
+    "https://drive.google.com/file/d/1KxX2XyHh7AUXO0rEk-U3w2Z7Z0XrrBYr/view?usp=drive_link"
 
   const handleMail = () => {
     window.location.href = "mailto:nejihoussein1@gmail.com"
@@ -21,68 +20,137 @@ const HeroSection = () => {
 
   return (
     <Reveal>
-      <section className="relative sm:mt-20 lg:mt-0 h-screen">
-        <div className="flex relative md:flex-row gap-6 h-full items-center justify-center lg:justify-around flex-col mb-10 lg:mb-0 z-10 px-10">
-          <div
-            className={`px-4  lg:flex-1 text-center ${
-              isArabic ? "md:text-right" : "md:text-left"
-            } `}
+      <section className="relative overflow-hidden min-h-[calc(100vh-80px)] sm:min-h-screen flex items-center justify-center py-6 sm:py-8 md:py-12">
+        <style>{`
+          @keyframes blob {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            34% { border-radius: 70% 30% 46% 54% / 30% 30% 35% 70%; }
+            67% { border-radius: 100% 60% 52% 37% / 72% 44% 56% 28%; }
+          }
+        `}</style>
+        <div className="flex relative gap-8 sm:gap-12 md:gap-20 lg:gap-32 items-center justify-center z-10 px-4 sm:px-6 md:px-10 w-full flex-col md:flex-row max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: isArabic ? 50 : -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className={`px-2 sm:px-4 w-full md:w-auto md:max-w-md lg:max-w-lg text-center md:text-left ${
+              isArabic ? "md:text-right" : ""
+            }`}
           >
-            <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r text-right from-[#BED250] to-[#109C81]">
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-white font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-2 sm:mb-3 md:mb-4"
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r text-right from-[#BED250] to-[#109C81] py-2 inline-block">
                 {hero("hello")}
               </span>
               <br />
-              <TypeAnimation
-                sequence={[
-                  hero("name"),
-                  1000,
-                  hero("work"),
-                  1000,
-                  hero("work2"),
-                ]}
-                wrapper="span"
-                speed={20}
-                repeat={Infinity}
-              />
-            </h1>
-            <p className="text-[#adb7be] text-dir mb-6 text-base sm:text-lg lg:text-xl">
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="inline-block whitespace-nowrap"
+              >
+                <TypeAnimation
+                  sequence={[
+                    hero("name"),
+                    1000,
+                    hero("work"),
+                    1000,
+                    hero("work2"),
+                  ]}
+                  wrapper="span"
+                  speed={20}
+                  repeat={Infinity}
+                />
+              </motion.span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-[#adb7be] text-dir mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm md:text-base lg:text-lg"
+            >
               {hero("aboutme")}
-            </p>
-            <div className="z-20">
-              <button
+            </motion.p>
+
+            {/* CTA Buttons - Scale & fade */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="z-20 flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-fit"
+            >
+              <motion.button
                 onClick={handleMail}
-                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#BED250] to-[#109C81] text-white"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-3 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-br from-[#BED250] to-[#109C81] text-white font-semibold shadow-lg hover:shadow-xl transition-shadow text-xs sm:text-sm md:text-base"
                 aria-label={hero("hire")}
               >
                 {hero("hire")}
-              </button>
-              <Link href={resumeLink} target="_blank">
-                <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500  mt-3">
-                  <span className="block bg-[#181818] hover:bg-slate-800 text-white rounded-full py-2 px-5">
+              </motion.button>
+              <Link href={resumeLink} target="_blank" className="w-full sm:w-fit">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-1 py-1 w-full rounded-full bg-transparent bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500 font-semibold shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <span className="block bg-[#181818] hover:bg-slate-800 text-white rounded-full py-2 px-3 sm:px-5 transition-colors text-xs sm:text-sm md:text-base">
                     {hero("download")}
                   </span>
-                </button>
+                </motion.button>
               </Link>
-            </div>
-          </div>
-          <div
-            className={`${
-              isArabic ? "order-last md:order-first" : ""
-            } mt-10 md:mt-0`}
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="mt-4 sm:mt-6 md:mt-0 flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]"
           >
-            <Image
-              src="/personal-image.png"
-              alt="personal"
-              width={350}
-              height={350}
-              priority
-              sizes="(min-width: 1500px) 342px, (min-width: 1040px) calc(25.68vw - 38px), (min-width: 780px) calc(31.25vw - 79px), (min-width: 520px) 342px, calc(97vw - 143px)"
-              className="rounded-full  border-4 border-[#BED250] border-double"
-            />
-          </div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="relative shadow-2xl overflow-hidden flex-shrink-0 w-full h-full"
+              style={{
+                borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+                animation: "blob 7s infinite",
+                boxShadow: "0 0 40px rgba(190, 210, 80, 0.4), 0 0 80px rgba(16, 156, 129, 0.2)",
+              }}
+            >
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-[#BED250] via-[#109C81] to-cyan-500"
+                style={{
+                  borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+                }}
+              />
+              <div
+                className="absolute inset-1 bg-[#0f172a]"
+                style={{
+                  borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+                }}
+              >
+                <Image
+                  src="/hussein.png"
+                  alt="personal"
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+                  className="object-cover"
+                  style={{
+                    borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+                  }}
+                />
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
-        <ParticleComponent />
+        <AnimatedBackground />
       </section>
     </Reveal>
   )

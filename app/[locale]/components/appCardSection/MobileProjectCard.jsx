@@ -2,47 +2,54 @@ import React from "react"
 import Image from "next/image"
 import ProjectLinks from "./ProjectLink"
 import Reveal from "../Layout/RevealAnimation/Reveal"
+import { motion } from "framer-motion"
+
 const MobileProjectCard = ({ projectInfo }) => {
-  const { title, description, image, links, tags } = projectInfo;
+  const { title, description, image, links, tags } = projectInfo
+
   return (
     <Reveal>
-      <div className="group mb-3 px-4">
-        <section className="group w-full h-full cursor-pointer">
-          <div className="relative w-full h-full">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full"
+      >
+        <div className="flex flex-col gap-element-gap min-h-[380px] sm:min-h-[400px]">
+          {/* Image */}
+          <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
             <Image
               src={image}
-              width={500}
-              height={500}
-              className="rounded-xl object-cover"
-              sizes="(min-width: 680px) 500px, calc(93.33vw - 116px)"
+              width={600}
+              height={600}
+              className="rounded-xl object-cover w-full h-auto"
+              sizes="(min-width: 680px) 600px, calc(100vw - 32px)"
               alt={title}
             />
-            <div className="absolute gap-3 top-0 flex flex-col justify-center p-4 items-center left-0 bg-[#181818] h-full w-full opacity-0 group-hover:flex group-hover:opacity-80 transition-all duration-500 cursor-pointer">
-              {/* Title */}
-              <div className="bg-[#181818] -translate-y-[100%] group-hover:translate-y-0 duration-500 transition max-w-96">
-                <h5 className="text-xl font-semibold mb-2 text-[#BED250]">
-                  {title}
-                </h5>
-              </div>
-
-              <ProjectLinks links={links} />
-
-              {/* <ul className="flex flex-wrap gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                {tags.map((tag, index) => (
-                  <li
-                    className="bg-[#BED250] px-2 py-1 text-[0.3rem] uppercase tracking-wider text-black rounded-full"
-                    key={index}
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul> */}
-            </div>
           </div>
-        </section>
-      </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-element-gap px-4 justify-between flex-1"
+          >
+            <div className="flex flex-col gap-element-gap">
+              <h3 className="text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#BED250] to-[#109C81] py-2 tracking-tight">
+                {title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed text-base md:text-lg font-light">
+                {description}
+              </p>
+            </div>
+            <div>
+              <ProjectLinks links={links} isPrivateRepo={projectInfo.isPrivateRepo} />
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
     </Reveal>
-  );
-};
+  )
+}
 
 export default MobileProjectCard

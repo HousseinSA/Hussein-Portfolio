@@ -1,9 +1,10 @@
-'use client'
+"use client"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { FaBars } from "react-icons/fa6"
 import { IoMdClose } from "react-icons/io"
+import { useLocale } from "next-intl"
 
 import NavMenu from "./Nav/NavMenu"
 import MobileNav from "./MobileNav"
@@ -11,6 +12,9 @@ import MobileNav from "./MobileNav"
 const HeaderSection = () => {
   const [openNav, setOpenNav] = useState(false)
   const [headerOnScroll, setHeaderOnScroll] = useState(false)
+  const locale = useLocale()
+  const isArabic = locale === "ar"
+  const headerRef = useRef(null)
 
   useEffect(() => {
     const checkingScroll = () => {
@@ -21,15 +25,31 @@ const HeaderSection = () => {
     return () => window.removeEventListener("scroll", checkingScroll)
   }, [openNav])
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setOpenNav(false)
+      }
+    }
+
+    if (openNav) {
+      document.addEventListener("mousedown", handleClickOutside)
+      return () => document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [openNav])
+
   const headerBackground =
-    headerOnScroll && !openNav ? "bg-black/20" : "bg-black/80"
+    headerOnScroll && !openNav
+      ? "bg-gradient-to-b from-[#0f172a]/50 to-[#1a1f35]/30 backdrop-blur-md"
+      : "bg-gradient-to-b from-[#0f172a]/90 to-[#1a1f35]/70 backdrop-blur-md"
 
   return (
     <section
+      ref={headerRef}
       className={` ${headerBackground} transition duration-300 z-20 fixed top-0 left-0 right-0`}
     >
       <header
-        className={`px-5 md:px-8 py-2 flex justify-between flex-wrap items-center`}
+        className={`px-5 md:px-8 py-4 flex justify-between items-center gap-4`}
       >
         <Link href={"/"} className="text-5xl font-semibold">
           <Image
@@ -45,7 +65,8 @@ const HeaderSection = () => {
             alt="website logo"
           />
         </Link>
-        <div className="block md:hidden mr-5 text-white">
+        <div className="flex-1"></div>
+        <div className={`block md:hidden text-white ${isArabic ? "ml-auto" : ""}`}>
           {openNav ? (
             <button
               onClick={() => setOpenNav(false)}
@@ -64,7 +85,7 @@ const HeaderSection = () => {
         </div>
         {!openNav && <NavMenu />}
       </header>
-      {openNav && <MobileNav />}
+      {openNav && <MobileNav onClose={() => setOpenNav(false)} />}
     </section>
   )
 }

@@ -10,6 +10,12 @@ const SkillImage = ({ index, imgLink, title }) => {
     visible: { opacity: 1, y: 0 },
   }
 
+  const iconSize = {
+    mobile: 50,
+    tablet: 60,
+    desktop: 70,
+  }
+
   return (
     <motion.div
       variants={ImageVariants}
@@ -21,19 +27,47 @@ const SkillImage = ({ index, imgLink, title }) => {
       }}
     >
       {title === "Nextjs" ? (
-        <TbBrandNextjs size={70} color="white" />
+        <>
+          <TbBrandNextjs size={iconSize.mobile} className="sm:hidden" color="white" />
+          <TbBrandNextjs size={iconSize.tablet} className="hidden sm:block md:hidden" color="white" />
+          <TbBrandNextjs size={iconSize.desktop} className="hidden md:block" color="white" />
+        </>
       ) : title === "Github" ? (
-        <FaGithub size={70} color="white" />
+        <>
+          <FaGithub size={iconSize.mobile} className="sm:hidden" color="white" />
+          <FaGithub size={iconSize.tablet} className="hidden sm:block md:hidden" color="white" />
+          <FaGithub size={iconSize.desktop} className="hidden md:block" color="white" />
+        </>
       ) : title === "express" ? (
-        <SiExpress size={70} color="white" />
+        <>
+          <SiExpress size={iconSize.mobile} className="sm:hidden" color="white" />
+          <SiExpress size={iconSize.tablet} className="hidden sm:block md:hidden" color="white" />
+          <SiExpress size={iconSize.desktop} className="hidden md:block" color="white" />
+        </>
       ) : (
-        <Image
-          src={imgLink && imgLink}
-          alt={title}
-          width={70}
-          height={70}
-          className={`${title === "Nextjs" && "icon"}`}
-        />
+        <>
+          <Image
+            src={imgLink && imgLink}
+            alt={title}
+            width={iconSize.mobile}
+            height={iconSize.mobile}
+            className={`sm:hidden ${title === "Nextjs" && "icon"}`}
+          />
+          <Image
+            src={imgLink && imgLink}
+            alt={title}
+            width={iconSize.tablet}
+            height={iconSize.tablet}
+            className={`hidden sm:block md:hidden ${title === "Nextjs" && "icon"}`}
+          />
+          <Image
+            src={imgLink && imgLink}
+            alt={title}
+            width={iconSize.desktop}
+            height={iconSize.desktop}
+            className={`hidden md:block ${title === "Nextjs" && "icon"}`}
+          />
+        </>
       )}
     </motion.div>
   )

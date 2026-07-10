@@ -10,7 +10,7 @@ const NavLink = ({ href, linkName, sectionInView }) => {
         href={href}
         className={`block py-2 ${
           sectionInView ? inViewBackgournd : "text-[#ADB7BE]"
-        } pl-3 pr-4  sm:text-lg rounded md:p-0 hover:text-transparent  ${hoverBackground} hover:bg-gradient-to-r  `}
+        } px-3 sm:text-lg rounded md:p-0 hover:text-transparent ${hoverBackground} hover:bg-gradient-to-r`}
       >
         {linkName}
       </Link>

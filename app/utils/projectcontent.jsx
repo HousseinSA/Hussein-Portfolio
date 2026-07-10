@@ -5,120 +5,63 @@ export function useProjectContent() {
   const projects = [
     {
       id: 0,
-      title: "Toyota-ecu-services",
-      description: projectsContent("project9"),
-      image: "/projects/toyota-ecu-services.png",
+      title: "Krily-Engine",
+      description: projectsContent("Krily-Engine"),
+      image: "/projects/KriliyEngin.png",
       links: [
-        "https://auto-mobile-git-dev-housseinsas-projects.vercel.app/login",
-        "https://github.com/HousseinSA/auto-mobile",
+        "https://kriliyengin.com/",
+        "https://github.com/HousseinSA/Construction-Supply-Rentals",
       ],
-      tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
+      isPrivateRepo: false,
+      tags: ["Nextjs", "TailwindCSS", "Mongodb"],
     },
     {
       id: 1,
-      title: "Safaris Center",
-      description: projectsContent("project8"),
-      image: "/projects/safaris-center-demo.png",
+      title: "Krily-Car",
+      description: projectsContent("Krily-Car"),
+      image: "/projects/kriliycar.png",
       links: [
-        "https://safaris-center-demo.vercel.app/",
-        "https://github.com/HousseinSA/safaris-center",
+        "https://dashboard.kriliycar.com/",
+        "https://github.com/HousseinSA/krilly-car",
       ],
-      tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
+      isPrivateRepo: true,
+      tags: ["Nextjs", "TailwindCSS", "Mongodb"],
     },
     {
       id: 2,
-      title: "ShopNest-e-commerce",
-      description: projectsContent("project7"),
-      image: "/projects/ShopNest-e-commerce.png",
+      title: "Egtaely",
+      description: projectsContent("Egtaely"),
+      image: "/projects/egtaely.png",
       links: [
-        "https://shopnest-frontend.vercel.app/",
-        "https://github.com/HousseinSA/ShopNest",
+        "https://transport.egtaely.com/",
+        "https://github.com/HousseinSA/egtealy",
       ],
-      tags: [
-        "Nextjs",
-        "TailwindCSS",
-        "Mongodb",
-        "next-auth",
-        "zustand",
-        "others",
-      ],
+      isPrivateRepo: true,
+      tags: ["Nextjs", "TailwindCSS", "Mongodb"],
     },
     {
       id: 3,
-      title: "Stats-Master",
-      description: projectsContent("project0"),
-      image: "/projects/statsMaster.png",
+      title: "Toyota-ecu-services",
+      description: projectsContent("Toyota-ecu-services"),
+      image: "/projects/toyota-ecu-services.png",
       links: [
-        "https://stat-master.vercel.app/",
-        "https://github.com/HousseinSA/Stat-master",
+        "https://toyota-ecu-services.com",
+        "https://github.com/HousseinSA/auto-mobile",
       ],
-      tags: ["Nextjs", "TailwindCSS", "Football API", "Zustand"],
+      isPrivateRepo: true,
+      tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
     },
     {
       id: 4,
-      title: "moviesInfo",
-      description: projectsContent("project1"),
-      image: "/projects/moviesland.png",
+      title: "Safaris Center",
+      description: projectsContent("Safaris Center"),
+      image: "/projects/safaris-center-demo.png",
       links: [
-        "https://cina-info.netlify.app/",
-        "https://github.com/HousseinSA/LandOfMovies",
+        "https://safaris-center.vercel.app",
+        "https://github.com/HousseinSA/safaris-center",
       ],
-      tags: ["ReactJS", "TailwindCSS", "IDM API"],
-    },
-    {
-      id: 5,
-      title: "Ebook-store",
-      description: projectsContent("project2"),
-      image: "/projects/Ebook-store.png",
-      links: [
-        "https://ebook-shop.netlify.app/",
-        "https://github.com/HousseinSA/Ebook-Shop",
-      ],
-      tags: ["ReactJS", "TailwindCSS", "Redux", "0auth", "Mongodb"],
-    },
-    {
-      id: 6,
-      title: "Documents-editor",
-      description: projectsContent("project3"),
-      image: "/projects/docs-editor.png",
-      links: [
-        "https://docs-editor.netlify.app/",
-        "https://github.com/HousseinSA/Document-Editor-app",
-      ],
-      tags: ["ReactJS", "TailwindCSS", "Socket.io", "nodeJs"],
-    },
-    {
-      id: 7,
-      title: "weather-viewer",
-      description: projectsContent("project4"),
-      image: "/projects/weather-viewer.png",
-      links: [
-        "https://theweather101.netlify.app/",
-        "https://github.com/HousseinSA/Weather-viewer",
-      ],
-      tags: ["ReactJS", "TailwindCSS", "WeatherAPI"],
-    },
-    {
-      id: 8,
-      title: "budget-register",
-      description: projectsContent("project5"),
-      image: "/projects/budget-register.png",
-      links: [
-        "https://budget-register.netlify.app/",
-        "https://github.com/HousseinSA/Budget-Register",
-      ],
-      tags: ["ReactJS", "bootstrap", "Redux"],
-    },
-    {
-      id: 9,
-      title: "Go-search-engine",
-      image: "/projects/go-search-engine.png",
-      description: projectsContent("project6"),
-      links: [
-        "https://go-search-engine.vercel.app/",
-        "https://github.com/HousseinSA/Go-search-engine",
-      ],
-      tags: ["Nextjs", "Tailwindcss", "Google-engine-api"],
+      isPrivateRepo: true,
+      tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
     },
   ]
 
@@ -128,11 +71,11 @@ export function useProjectContent() {
 export function useTechImages() {
   const frontEndSkills = [
     {
-      tool: "javascript",
+      tool: "JavaScript",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     },
     {
-      tool: "Typescript",
+      tool: "TypeScript",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     },
     {
@@ -144,83 +87,152 @@ export function useTechImages() {
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     },
     {
-      tool: "REACT",
+      tool: "React",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      tool: "Next.js",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
     },
     {
       tool: "Redux",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
     },
     {
-      tool: "Nextjs",
-      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      tool: "Zustand",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-plain.svg",
     },
-    {
-      tool: "PHP",
-      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
-    },
-
-    {
-      tool: "Dart",
-      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
-    },
-
     {
       tool: "Tailwind",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    },
+    {
+      tool: "Sass",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
     },
     {
       tool: "Bootstrap",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     },
     {
-      tool: "materialui",
+      tool: "Material UI",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
     },
     {
-      tool: "Python",
-      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg",
-    },
-    {
-      tool: "flutter",
-      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+      tool: "Cloudinary",
+      img: "https://cdn.worldvectorlogo.com/logos/cloudinary-2.svg",
     },
   ]
+
   const backendSkills = [
     {
-      tool: "NodeJS",
+      tool: "Node.js",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      tool: "Express",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    },
+    {
+      tool: "PHP",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+    },
+    {
+      tool: "Laravel",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg",
     },
     {
       tool: "MongoDB",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     },
     {
+      tool: "MySQL",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+    },
+    {
+      tool: "PostgreSQL",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    },
+    {
       tool: "Firebase",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg",
     },
     {
-      tool: "express",
-      img: undefined,
+      tool: "Supabase",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
     },
     {
-      tool: "mysql",
-      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+      tool: "Prisma",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
     },
   ]
-  const tools = [
+
+  const mobileSkills = [
     {
-      tool: "Github",
-      img: undefined,
+      tool: "Flutter",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
     },
+    {
+      tool: "React Native",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      tool: "Dart",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+    },
+  ]
+
+  const cmsSkills = [
+    {
+      tool: "WordPress",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+    },
+    {
+      tool: "Drupal",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original.svg",
+    },
+  ]
+
+  const devopsSkills = [
     {
       tool: "Git",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
+      tool: "GitHub",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
+    {
+      tool: "Docker",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    },
+    {
+      tool: "AWS",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+    },
+    {
+      tool: "VS Code",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    },
+    {
+      tool: "Postman",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    },
+    {
       tool: "Figma",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     },
+    {
+      tool: "Slack",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg",
+    },
   ]
-  return { frontEndSkills, backendSkills, tools }
+
+  return {
+    frontEndSkills,
+    backendSkills,
+    mobileSkills,
+    cmsSkills,
+    devopsSkills,
+  }
 }

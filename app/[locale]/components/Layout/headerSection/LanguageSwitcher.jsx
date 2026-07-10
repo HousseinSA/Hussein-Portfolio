@@ -2,56 +2,75 @@
 import React from "react"
 import { useLocale } from "next-intl"
 import { Link, usePathname, useRouter } from "../../../../../navigation"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 const LanguageSwitcher = () => {
   const locale = useLocale()
-  const router = useRouter()
-  const pathName = usePathname()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const isArabic = locale === "ar"
+  const switcherRef = useRef(null)
+
   const handleToggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
+
   const closeLanguageList = () => {
     setIsDropdownOpen(false)
   }
-  const handleChange = (e) => {
-    router.push(pathName, { locale: e.target.value })
-  }
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (switcherRef.current && !switcherRef.current.contains(event.target)) {
+        setIsDropdownOpen(false)
+      }
+    }
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+      return () => document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isDropdownOpen])
+
   const languages = [
-    { short: "en", name: "English" },
-    { short: "ar", name: "العربية" },
-    { short: "fr", name: "Français" },
+    { short: "EN", code: "en" },
+    { short: "AR", code: "ar" },
+    { short: "FR", code: "fr" },
   ]
+
   return (
-    <div className="flex z-50 text-lg items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse relative">
+    <div ref={switcherRef} className="flex z-50 items-center md:order-2 relative">
       <button
         type="button"
         onClick={handleToggleDropdown}
-        className="block py-2 pl-3 pr-4 text-[#ADB7BE]  sm:text-lg rounded md:p-0 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#BED250] hover:to-[#109C81]"
+        className="py-1 px-2 text-sm text-[#ADB7BE] rounded hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#BED250] hover:to-[#109C81] whitespace-nowrap font-semibold"
       >
-        {languages?.map((lang) => {
-          if (lang.short === locale) return lang.name
-        })}
+        {locale.toUpperCase()}
       </button>
       {isDropdownOpen && (
         <div
-          className="z-50 absolute top-full -left-10 mt-1 w-32 bg-white divide-y divide-gray-100 rounded-lg shadow"
+          className={`z-50 absolute top-full mt-2 bg-gradient-to-br from-[#0f172a] to-[#1a1f35] border border-[#BED250]/30 rounded-lg shadow-lg ${
+            isArabic ? "right-0" : "left-0"
+          }`}
           id="language-dropdown-menu"
         >
           <ul
-            className="py-2 font-medium text-[#ADB7BE] bg-gray-500 rounded-lg"
+            className="py-1 font-semibold"
             role="none"
           >
-            {languages.map(({ name, short }, index) => {
+            {languages.map(({ short, code }, index) => {
+              const isActive = code === locale
               return (
                 <Link
                   href={"/"}
-                  locale={short}
+                  locale={code}
                   key={index}
                   onClick={closeLanguageList}
                 >
-                  <button className="block px-4 py-2 text-sm text-white hover:bg-gray-600 hover:w-full  text-left">
-                    {name}
+                  <button className={`block px-3 py-1 text-xs w-full text-left transition-colors ${
+                    isActive
+                      ? "text-[#BED250] bg-[#BED250]/10"
+                      : "text-[#ADB7BE] hover:text-[#BED250] hover:bg-[#BED250]/5"
+                  }`}>
+                    {short}
                   </button>
                 </Link>
               )
