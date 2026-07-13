@@ -15,7 +15,7 @@ const HeroSection = () => {
     "https://drive.google.com/file/d/1KxX2XyHh7AUXO0rEk-U3w2Z7Z0XrrBYr/view?usp=drive_link"
 
   const handleMail = () => {
-    window.location.href = "mailto:nejihoussein1@gmail.com"
+    window.location.href = "mailto:husseinsedoum@gmail.com"
   }
 
   return (
@@ -26,6 +26,11 @@ const HeroSection = () => {
             0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
             34% { border-radius: 70% 30% 46% 54% / 30% 30% 35% 70%; }
             67% { border-radius: 100% 60% 52% 37% / 72% 44% 56% 28%; }
+          }
+          .blob-container {
+            backface-visibility: hidden;
+            perspective: 1000px;
+            transform: translateZ(0);
           }
         `}</style>
         <div className="flex relative gap-8 sm:gap-12 md:gap-20 lg:gap-32 items-center justify-center z-10 px-4 sm:px-6 md:px-10 w-full flex-col md:flex-row max-w-7xl mx-auto">
@@ -93,7 +98,11 @@ const HeroSection = () => {
               >
                 {hero("hire")}
               </motion.button>
-              <Link href={resumeLink} target="_blank" className="w-full sm:w-fit">
+              <Link
+                href={resumeLink}
+                target="_blank"
+                className="w-full sm:w-fit"
+              >
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -116,11 +125,12 @@ const HeroSection = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="relative shadow-2xl overflow-hidden flex-shrink-0 w-full h-full"
+              className="blob-container relative shadow-2xl overflow-hidden flex-shrink-0 w-full h-full"
               style={{
                 borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
                 animation: "blob 7s infinite",
-                boxShadow: "0 0 40px rgba(190, 210, 80, 0.4), 0 0 80px rgba(16, 156, 129, 0.2)",
+                boxShadow:
+                  "0 0 40px rgba(190, 210, 80, 0.4), 0 0 80px rgba(16, 156, 129, 0.2)",
               }}
             >
               <div
@@ -136,7 +146,7 @@ const HeroSection = () => {
                 }}
               >
                 <Image
-                  src="/hussein.png"
+                  src="/Hussein.png"
                   alt="personal"
                   fill
                   priority

@@ -14,6 +14,7 @@ const MobileProjectCard = ({ projectInfo }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="w-full"
+        style={{ willChange: "opacity, transform" }}
       >
         <div className="flex flex-col gap-element-gap min-h-[380px] sm:min-h-[400px]">
           {/* Image */}
@@ -33,6 +34,7 @@ const MobileProjectCard = ({ projectInfo }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col gap-element-gap px-4 justify-between flex-1"
+            style={{ willChange: "opacity, transform" }}
           >
             <div className="flex flex-col gap-element-gap">
               <h3 className="text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#BED250] to-[#109C81] py-2 tracking-tight">

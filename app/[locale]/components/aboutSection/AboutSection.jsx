@@ -20,6 +20,11 @@ const AboutSection = () => {
             34% { border-radius: 70% 30% 46% 54% / 30% 30% 35% 70%; }
             67% { border-radius: 100% 60% 52% 37% / 72% 44% 56% 28%; }
           }
+          .blob-container {
+            backface-visibility: hidden;
+            perspective: 1000px;
+            transform: translateZ(0);
+          }
         `}</style>
         <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row justify-center gap-element-gap md:gap-heading-gap lg:gap-16 items-center lg:items-start">
           <motion.div
@@ -32,7 +37,7 @@ const AboutSection = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="relative shadow-2xl overflow-hidden flex-shrink-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+              className="blob-container relative shadow-2xl overflow-hidden flex-shrink-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
               style={{
                 borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
                 animation: "blob 7s infinite",

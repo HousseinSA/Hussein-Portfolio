@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import ReactLoading from "react-loading"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaPaperPlane, FaEnvelope, FaPhone } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaPaperPlane, FaEnvelope, FaPhone, FaCheck } from "react-icons/fa"
 import Link from "next/link"
 import FooterSection from "../Layout/FooterSection"
 import { useLocale, useTranslations } from "next-intl"
@@ -64,11 +64,12 @@ const ContactSection = () => {
                 <p className="text-base text-center lg:text-start lg:text-lg text-[#adb7be]">
                   {contactSection("content").split("\n\n")[0]}
                 </p>
-                <div className="flex flex-col gap-element-gap text-sm lg:text-base text-[#adb7be]">
+                <div className="flex flex-col gap-element-gap text-sm lg:text-base text-white">
                   {contactSection("content").split("\n\n")[1]?.split("\n").map((item, idx) => {
                     const getIcon = () => {
-                      if (item.includes("@") || item.includes("mail")) return <FaEnvelope className="text-[#BED250] flex-shrink-0" />
-                      if (item.includes("222") || item.includes("phone")) return <FaPhone className="text-[#BED250] flex-shrink-0" />
+                      if (item.includes("@") || item.includes("mail")) return <FaEnvelope className="text-white flex-shrink-0" />
+                      if (item.includes("222") || item.includes("phone")) return <FaPhone className="text-white flex-shrink-0" />
+                      if (item.includes("available") || item.includes("متاح") || item.includes("Actuellement")) return <FaCheck className="text-white flex-shrink-0" />
                       return null
                     }
                     return (
@@ -80,8 +81,10 @@ const ContactSection = () => {
                         viewport={{ once: true }}
                         className="flex items-center gap-3"
                       >
-                        {getIcon()}
-                        <span className="text-[#BED250]">{item}</span>
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#BED250] to-[#109C81] flex items-center justify-center flex-shrink-0">
+                          {getIcon()}
+                        </div>
+                        <span className="text-white">{item}</span>
                       </motion.p>
                     )
                   })}
@@ -133,7 +136,7 @@ const ContactSection = () => {
           <div className="w-full h-auto hidden lg:block absolute left-1/2 top-1/2 transform -translate-y-1/2 h-3/4 w-px bg-gradient-to-b from-transparent via-[#BED250]/30 to-transparent"></div>
           <div className="w-full h-auto">
             <form onSubmit={handelSubmit}>
-              <div className="flex flex-col gap-element-gap justify-center backdrop-blur-md border border-[#BED250]/20 bg-gradient-to-br from-[#0f172a]/80 to-[#1a2a3a]/60 py-0 md:py-8 rounded-xl px-6 shadow-2xl shadow-[#BED250]/10 hover:shadow-[#BED250]/20 transition duration-300">
+              <div className="flex flex-col gap-element-gap justify-center backdrop-blur-md border border-[#BED250]/20 bg-gradient-to-br from-[#0f172a]/80 to-[#1a2a3a]/60 py-6 sm:py-8 md:py-12 px-4 sm:px-6 md:px-8 rounded-xl shadow-2xl shadow-[#BED250]/10 hover:shadow-[#BED250]/20 transition duration-300">
                 <div>
                   <label className="mb-3 block text-[#BED250] font-medium" htmlFor="email">
                     {contactSection("email")}
@@ -142,7 +145,7 @@ const ContactSection = () => {
                     <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#BED250]/50" />
                     <input
                       value={from}
-                      className={`rounded-lg border border-[#BED250]/20 focus:border-[#BED250]/60 focus:outline-none focus:ring-2 focus:ring-[#BED250]/20 py-3 w-full bg-[#0f172a]/50 text-[#BED250] placeholder-[#adb7be]/50 transition duration-300 ${
+                      className={`rounded-lg border border-[#BED250]/20 focus:border-[#BED250]/60 focus:outline-none focus:ring-2 focus:ring-[#BED250]/20 py-2 sm:py-3 w-full bg-[#0f172a]/50 text-[#BED250] placeholder-[#adb7be]/50 transition duration-300 text-sm sm:text-base ${
                         isArabic ? "pr-10 pl-3" : "pl-10 pr-3"
                       }`}
                       type="email"
@@ -162,7 +165,7 @@ const ContactSection = () => {
                   <input
                     value={subject}
                     onChange={({ target }) => setSubject(target.value)}
-                    className={`rounded-lg border border-[#BED250]/20 focus:border-[#BED250]/60 focus:outline-none focus:ring-2 focus:ring-[#BED250]/20 py-3 w-full bg-[#0f172a]/50 text-[#BED250] placeholder-[#adb7be]/50 transition duration-300 ${
+                    className={`rounded-lg border border-[#BED250]/20 focus:border-[#BED250]/60 focus:outline-none focus:ring-2 focus:ring-[#BED250]/20 py-2 sm:py-3 w-full bg-[#0f172a]/50 text-[#BED250] placeholder-[#adb7be]/50 transition duration-300 text-sm sm:text-base ${
                       isArabic ? "pr-3" : "pl-3"
                     }`}
                     type="text"
@@ -177,12 +180,12 @@ const ContactSection = () => {
                   <textarea
                     value={message}
                     onChange={({ target }) => setMessage(target.value)}
-                    className={`rounded-lg border border-[#BED250]/20 focus:border-[#BED250]/60 focus:outline-none focus:ring-2 focus:ring-[#BED250]/20 py-3 w-full bg-[#0f172a]/50 text-[#BED250] placeholder-[#adb7be]/50 transition duration-300 resize-none ${
+                    className={`rounded-lg border border-[#BED250]/20 focus:border-[#BED250]/60 focus:outline-none focus:ring-2 focus:ring-[#BED250]/20 py-2 sm:py-3 w-full bg-[#0f172a]/50 text-[#BED250] placeholder-[#adb7be]/50 transition duration-300 resize-none text-sm sm:text-base ${
                       isArabic ? "pr-3" : "pl-3"
                     }`}
                     name="message"
                     cols="30"
-                    rows="6"
+                    rows="5"
                     placeholder={contactSection("message")}
                     required
                   ></textarea>
@@ -191,7 +194,7 @@ const ContactSection = () => {
                   type="submit"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="text-white rounded-lg py-3 w-full px-4 bg-gradient-to-r from-[#BED250] to-[#a8c41f] hover:shadow-lg hover:shadow-[#BED250]/30 transition duration-300 font-semibold flex items-center justify-center gap-2 mt-2"
+                  className="text-white rounded-lg py-2 sm:py-3 w-full px-4 bg-gradient-to-r from-[#BED250] to-[#a8c41f] hover:shadow-lg hover:shadow-[#BED250]/30 transition duration-300 font-semibold flex items-center justify-center gap-2 mt-2 text-sm sm:text-base"
                 >
                   {loading ? (
                     <div className="flex gap-3 w-full justify-center items-center">

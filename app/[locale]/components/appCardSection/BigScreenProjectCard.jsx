@@ -21,6 +21,7 @@ export default function BigScreenProjectCard({ projectInfo, isEven }) {
           whileHover={{ scale: 1.12, y: -20 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="flex-1 min-w-0"
+          style={{ willChange: "transform" }}
         >
           <div className="relative overflow-hidden rounded-2xl shadow-2xl group bg-gradient-to-br from-[#1a2a3a]/60 to-[#0f172a]/60 p-4 hover:shadow-[0_20px_60px_rgba(190,210,80,0.3)] transition-shadow duration-350">
             <div className="absolute inset-0 bg-gradient-to-r from-[#BED250]/20 via-[#109C81]/20 to-[#BED250]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
@@ -47,6 +48,7 @@ export default function BigScreenProjectCard({ projectInfo, isEven }) {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           className="flex-1 min-w-0 flex flex-col gap-element-gap justify-between"
+          style={{ willChange: "opacity, transform" }}
         >
           <div className="flex flex-col gap-element-gap">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#BED250] to-[#109C81] py-2 tracking-tight">

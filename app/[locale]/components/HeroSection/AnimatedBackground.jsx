@@ -1,8 +1,16 @@
 "use client"
-import React from "react"
+import React, { useMemo } from "react"
 import { motion } from "framer-motion"
 
 const AnimatedBackground = () => {
+  const particles = useMemo(() => {
+    return [...Array(6)].map((_, i) => ({
+      id: i,
+      left: (i * 16.67) % 100,
+      top: (i * 15) % 100,
+    }))
+  }, [])
+
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10 top-0 left-0 right-0">
       <motion.div
@@ -16,6 +24,7 @@ const AnimatedBackground = () => {
           ease: "easeInOut",
         }}
         className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-[#BED250]/10 to-[#109C81]/10 rounded-full blur-3xl"
+        style={{ willChange: "transform" }}
       />
 
       <motion.div
@@ -30,6 +39,7 @@ const AnimatedBackground = () => {
           delay: 1,
         }}
         className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-[#109C81]/10 to-cyan-500/10 rounded-full blur-3xl"
+        style={{ willChange: "transform" }}
       />
 
       <motion.div
@@ -44,6 +54,7 @@ const AnimatedBackground = () => {
           delay: 2,
         }}
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-[#BED250]/5 to-purple-500/5 rounded-full blur-3xl"
+        style={{ willChange: "transform" }}
       />
 
       <svg
@@ -68,24 +79,24 @@ const AnimatedBackground = () => {
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
 
-      {[...Array(15)].map((_, i) => (
+      {particles.map((particle) => (
         <motion.div
-          key={i}
+          key={particle.id}
           animate={{
             y: [0, -300, 0],
-            x: Math.sin(i) * 100,
             opacity: [0, 1, 0],
           }}
           transition={{
-            duration: 5 + i * 0.5,
+            duration: 5 + particle.id * 0.5,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: i * 0.3,
+            delay: particle.id * 0.3,
           }}
           className="absolute w-1 h-1 bg-[#BED250] rounded-full"
           style={{
-            left: `${(i * 6.67) % 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
+            willChange: "transform, opacity",
           }}
         />
       ))}

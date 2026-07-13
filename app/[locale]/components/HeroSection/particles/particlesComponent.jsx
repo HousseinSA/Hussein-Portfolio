@@ -1,14 +1,30 @@
 // ParticleComponent.js
-import React, { useCallback } from "react"
+import React, { useCallback, useState, useEffect } from "react"
 import Particles from "react-tsparticles"
 import { loadSlim } from "tsparticles-slim"
 
 const ParticleComponent = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine)
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {}, [])
+
+  if (isMobile) {
+    return null
+  }
+
   return (
     <div style={{ pointerEvents: "none", zIndex: "-20" }}>
       <Particles
@@ -54,7 +70,7 @@ const ParticleComponent = () => {
                 enable: true,
                 area: 2500,
               },
-              value: 50,
+              value: 30,
             },
             opacity: {
               value: 0.2,
