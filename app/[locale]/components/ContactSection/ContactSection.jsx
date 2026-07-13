@@ -64,7 +64,7 @@ const ContactSection = () => {
                 <p className="text-base text-center lg:text-start lg:text-lg text-[#adb7be]">
                   {contactSection("content").split("\n\n")[0]}
                 </p>
-                <div className="flex flex-col gap-element-gap text-sm lg:text-base text-white">
+                <div dir={isArabic ? "rtl" : "ltr"} className="flex flex-col gap-element-gap text-sm lg:text-base text-white">
                   {contactSection("content").split("\n\n")[1]?.split("\n").map((item, idx) => {
                     const getIcon = () => {
                       if (item.includes("@") || item.includes("mail")) return <FaEnvelope className="text-white flex-shrink-0" />
@@ -84,10 +84,24 @@ const ContactSection = () => {
                         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#BED250] to-[#109C81] flex items-center justify-center flex-shrink-0">
                           {getIcon()}
                         </div>
-                        <span className="text-white">{item}</span>
+                        <span className="text-white" style={item.includes("222") ? { direction: "ltr" } : {}}>{item}</span>
                       </motion.p>
                     )
                   })}
+                  {isArabic && (
+                    <motion.p
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.7, duration: 0.5 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-3"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#BED250] to-[#109C81] flex items-center justify-center flex-shrink-0">
+                        <FaPhone className="text-white flex-shrink-0" />
+                      </div>
+                      <span className="text-white" style={{ direction: "ltr" }}>+222 4140 1147</span>
+                    </motion.p>
+                  )}
                 </div>
               </motion.div>
             </div>

@@ -4,11 +4,27 @@ import { motion } from "framer-motion"
 import { GrGithub } from "react-icons/gr"
 import { SiExpress } from "react-icons/si"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const SkillImage = ({ index, img, tool }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const iconSize = typeof window !== 'undefined' && window.innerWidth < 640 ? 45 : window.innerWidth < 1024 ? 55 : 70
+  const [iconSize, setIconSize] = useState(70)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setIconSize(45)
+      } else if (window.innerWidth < 1024) {
+        setIconSize(55)
+      } else {
+        setIconSize(70)
+      }
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   const ImageVariants = {
     hidden: { opacity: 0, y: 100 },

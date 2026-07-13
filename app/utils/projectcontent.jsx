@@ -10,7 +10,6 @@ export function useProjectContent() {
       image: "/projects/KriliyEngin.png",
       links: [
         "https://kriliyengin.com/",
-        "https://github.com/HousseinSA/Construction-Supply-Rentals",
       ],
       isPrivateRepo: false,
       tags: ["Nextjs", "TailwindCSS", "Mongodb"],
@@ -22,7 +21,6 @@ export function useProjectContent() {
       image: "/projects/kriliycar.png",
       links: [
         "https://dashboard.kriliycar.com/",
-        "https://github.com/HousseinSA/krilly-car",
       ],
       isPrivateRepo: true,
       tags: ["Nextjs", "TailwindCSS", "Mongodb"],
@@ -34,7 +32,6 @@ export function useProjectContent() {
       image: "/projects/egtaely.png",
       links: [
         "https://transport.egtaely.com/",
-        "https://github.com/HousseinSA/egtealy",
       ],
       isPrivateRepo: true,
       tags: ["Nextjs", "TailwindCSS", "Mongodb"],
@@ -46,7 +43,6 @@ export function useProjectContent() {
       image: "/projects/toyota-ecu-services.png",
       links: [
         "https://toyota-ecu-services.com",
-        "https://github.com/HousseinSA/auto-mobile",
       ],
       isPrivateRepo: true,
       tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],
@@ -58,7 +54,6 @@ export function useProjectContent() {
       image: "/projects/safaris-center-demo.png",
       links: [
         "https://safaris-center.vercel.app",
-        "https://github.com/HousseinSA/safaris-center",
       ],
       isPrivateRepo: true,
       tags: ["Nextjs", "TailwindCSS", "Mongodb", "pdfjs"],

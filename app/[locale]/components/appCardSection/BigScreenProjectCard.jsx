@@ -23,9 +23,7 @@ export default function BigScreenProjectCard({ projectInfo, isEven }) {
           className="flex-1 min-w-0"
           style={{ willChange: "transform" }}
         >
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl group bg-gradient-to-br from-[#1a2a3a]/60 to-[#0f172a]/60 p-4 hover:shadow-[0_20px_60px_rgba(190,210,80,0.3)] transition-shadow duration-350">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#BED250]/20 via-[#109C81]/20 to-[#BED250]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
-
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl group bg-gradient-to-br from-[#1a2a3a]/60 to-[#0f172a]/60 p-4">
             <div className="relative w-full overflow-hidden rounded-xl bg-[#0f172a]">
               <Image
                 src={image}
@@ -37,9 +35,6 @@ export default function BigScreenProjectCard({ projectInfo, isEven }) {
                 sizes="(min-width: 1200px) 60vw, (min-width: 768px) 55vw, 100vw"
               />
             </div>
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-[inset_0_0_30px_rgba(190,210,80,0.2)]" />
           </div>
         </motion.div>
 
